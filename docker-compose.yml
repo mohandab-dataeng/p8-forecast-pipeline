@@ -1,0 +1,25 @@
+services:
+
+# 1. PostgresSQL
+    p8_pg:
+        image: postgres:16
+        container_name: p8-postgres
+        environment:
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=${POSTGRES_DB}
+        ports:
+            - "5433:5432"
+        volumes:
+            - p8_pg_data:/var/lib/postgresql/data
+        networks :
+            - forecast_network
+
+# Volumes 
+volumes:
+  p8_pg_data:
+
+# Réseau
+networks:
+    forecast_network:
+        name: forecast-network
