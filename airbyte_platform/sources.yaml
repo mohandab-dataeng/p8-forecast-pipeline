@@ -1,0 +1,38 @@
+# ----- Connecteurs -----
+
+# --- Connecteur "File" ---
+source_connector: "File (CSV, JSON, Excel, Feather, Parquet)"
+
+sources:
+  - name: infoclimat
+    url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Data_Source1_011024-071024.json"
+    format: "json"
+    provider:
+      storage: "HTTPS"
+    dataset_name: "infoclimat"
+
+  - name: weather_ichtegem
+    url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Weather+Underground+-+Ichtegem%2C+BE.xlsx"          # ← ton URL Ichtegem
+    format: "excel"
+    provider:
+      storage: "HTTPS"
+    dataset_name: "weather_ichtegem"
+
+  - name: weather_la_madeleine
+    url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Weather+Underground+-+La+Madeleine%2C+FR.xlsx"          # ← ton URL La Madeleine
+    format: "wxcel"
+    provider:
+      storage: "HTTPS"
+    dataset_name: "weather_la_madeleine"
+
+  - name: open_meteo_roubaix
+    url: "https://api.open-meteo.com/v1/forecast?latitude=50.69&longitude=3.17&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation"
+    format: "json"
+    provider:
+      storage: "HTTPS"
+    dataset_name: "open_meteo_roubaix"
+
+destination:
+  name: postgres_raw_p8
+  connector: "Postgres"
+  schema: "raw"

@@ -44,4 +44,4 @@ class AirbyteClient:
 
 if __name__ == "__main__":
     client = AirbyteClient()
-    print("Auth OK :", client.session.headers.get("Authorization")[:20], "...")
+    print("Authentification validée:", client.session.headers.get("Authorization")[:20], "...")
