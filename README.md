@@ -37,7 +37,7 @@ airbyte_platform/
 ├── resources.py        # fonctions idempotentes "get_or_create_X" (workspace, source, destination, connection)
 ├── config/
 │   └── sources.yaml     # déclaration des 3 sources + destination, en données, pas en code
-└── main.py              # orchestration : lit la config, authentifie, applique chaque ressource
+└── setup_airbyte.py              # orchestration : lit la config, authentifie, applique chaque ressource
 
 B. 
  

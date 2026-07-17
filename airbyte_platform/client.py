@@ -41,7 +41,3 @@ class AirbyteClient:
         resp = self.session.request(method, f"{self.base_url}{path}", **kwargs)
         resp.raise_for_status()
         return resp.json()
-
-if __name__ == "__main__":
-    client = AirbyteClient()
-    print("Authentification validée:", client.session.headers.get("Authorization")[:20], "...")
