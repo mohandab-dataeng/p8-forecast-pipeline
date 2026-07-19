@@ -71,4 +71,4 @@ def wait_for_sync(client, job_id):
         if status in ("succeeded", "failed", "incomplete", "cancelled"):
             return status
 
-        time.sleep(2)                                       
+        time.sleep(1)                                       

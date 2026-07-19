@@ -61,3 +61,7 @@ C. Ajout d'une API en direct (paramètres selectionnés)
 6. wind_direction_10m → direction du vent (°) — présent dans les deux
 7. wind_gusts_10m → rafales (km/h) — présent dans les deux
 8. precipitation → précipitations (mm) — présent dans les deux
+
+Problèmes rencontrés
+
+En plus de changer le port dans le fichier setup_airbyte en 5433 et : docker network connect forecast-network airbyte-abctl-control-plane dinon le chargement vers postgres ne fonctionne pas....

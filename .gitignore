@@ -10,3 +10,4 @@ wheels/
 # Virtual environments
 .venv
 *.code-workspace
+*.claude-code-history

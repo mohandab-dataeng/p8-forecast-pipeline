@@ -1,0 +1,25 @@
+# ----- Projet DBT: dbt_meteoforecast -----
+
+name: 'dbt_meteoforecast'
+version: '1.0.0'
+config-version: 2 
+
+# --- Nom du profil utilisé ---
+
+profile: 'profil_meteoforecast'
+
+# --- Chemin des repertoires --- 
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+# --- Configuration des couches dbt ---
+models:
+  dbt_meteoforecast:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

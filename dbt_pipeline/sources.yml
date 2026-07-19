@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: infoclimat
+      - name: weather_ichtegem
+      - name: weather_la_madeleine
+      - name: open_meteo_roubaix

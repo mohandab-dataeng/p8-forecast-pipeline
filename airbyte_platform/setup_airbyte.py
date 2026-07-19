@@ -59,7 +59,7 @@ for src in sources:
 
 destination_config = {
     "host": "p8-postgres",
-    "port": 5432,
+    "port": 5433,
     "database": os.environ["POSTGRES_DB"],
     "username": os.environ["POSTGRES_USER"],
     "password": os.environ["POSTGRES_PASSWORD"], 
