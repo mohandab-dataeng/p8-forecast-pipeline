@@ -5,7 +5,15 @@ description = "Pileline de données forecast meteo vers aws "
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "connectorx>=0.4.5",
+    "fastexcel>=0.20.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "polars>=1.42.1",
+    "psycopg2-binary>=2.9.12",
+    "pyarrow>=25.0.0",
     "python-dotenv>=1.2.2",
     "pyyaml>=6.0.3",
     "requests>=2.34.2",
+    "sqlalchemy>=2.0.51",
 ]

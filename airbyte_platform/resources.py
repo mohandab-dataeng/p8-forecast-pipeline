@@ -1,4 +1,3 @@
-from client import AirbyteClient
 import time
 
 def get_workspace_id(client, name="Default Workspace"):
@@ -71,4 +70,32 @@ def wait_for_sync(client, job_id):
         if status in ("succeeded", "failed", "incomplete", "cancelled"):
             return status
 
-        time.sleep(1)                                       
+        time.sleep(1) 
+
+def delete_connection(client, connection_id):
+    resp = client.session.delete(f"{client.base_url}/connections/{connection_id}")
+    resp.raise_for_status()
+
+def delete_source(client, source_id):
+    resp = client.session.delete(f"{client.base_url}/sources/{source_id}")
+    resp.raise_for_status()
+
+def delete_destination(client, destination_id):
+    resp = client.session.delete(f"{client.base_url}/destinations/{destination_id}")
+    resp.raise_for_status()
+
+def reset_workspace(client, workspace_id):
+    # 1. connexions (elles dépendent des sources et destinations)
+    conns = client._request("GET", f"/connections?workspaceId={workspace_id}")
+    for c in conns["data"]:
+        delete_connection(client, c["connectionId"])
+
+    # 2. sources
+    srcs = client._request("GET", f"/sources?workspaceId={workspace_id}")
+    for s in srcs["data"]:
+        delete_source(client, s["sourceId"])
+
+    # 3. destinations
+    dests = client._request("GET", f"/destinations?workspaceId={workspace_id}")
+    for d in dests["data"]:
+        delete_destination(client, d["destinationId"])

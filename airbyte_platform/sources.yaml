@@ -13,24 +13,6 @@ sources:
         storage: "HTTPS"
       dataset_name: "infoclimat"
 
-# -- xlsx --
-  - name: weather_ichtegem
-    config: 
-      url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Weather+Underground+-+Ichtegem%2C+BE.xlsx"
-      format: "excel"
-      provider:
-        storage: "HTTPS"
-      dataset_name: "weather_ichtegem"
-
-# -- xlsx --
-  - name: weather_la_madeleine
-    config: 
-      url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Weather+Underground+-+La+Madeleine%2C+FR.xlsx"
-      format: "excel"
-      provider:
-        storage: "HTTPS"
-      dataset_name: "weather_la_madeleine"
-
 # -- json(api) --
   - name: open_meteo_roubaix
     config: 
@@ -39,6 +21,15 @@ sources:
       provider:
         storage: "HTTPS"
       dataset_name: "open_meteo_roubaix"
+      
+# --- xlsx ---
+excel_files:
+
+  - name: weather_ichtegem
+    url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Weather+Underground+-+Ichtegem%2C+BE.xlsx"
+
+  - name: weather_la_madeleine
+    url: "https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/922_Data+Engineer/922_P8/Weather+Underground+-+La+Madeleine%2C+FR.xlsx"
 
 # --- Destination du transfert ---
 destination:

@@ -2,6 +2,7 @@
 
 import os
 import yaml
+import pandas as pd
 
 # --- Recuperation de la classe et de toutes les fonctions crées dans resources.py ---
 
@@ -15,6 +16,7 @@ from resources import (
     get_or_create_connection,
     trigger_sync,
     wait_for_sync,
+    reset_workspace,
 )
  
 # --- Lit la configuration déclarative du yml ---
@@ -26,10 +28,30 @@ sources = config["sources"]
 destination = config["destination"]
 source_connector = config["source_connector"]
 
+# --- Recupere la structure du fichier excel ---
+
+for file in config["excel_files"]:
+    for feuille in pd.ExcelFile(file["url"]).sheet_names:   # (1) quelle clé pour l'URL ?
+        nom = f"{file['name']}_{feuille}"                     # (2) quelle clé pour le nom ?
+        sources.append({                                           # (3) quelle méthode pour ajouter à une liste ?
+            "name": nom,
+            "config": {
+                "url": file["url"],
+                "format": "excel",
+                "provider": {"storage": "HTTPS"},
+                "reader_options": f'{{"sheet_name": "{feuille}"}}',  # (4) quelle variable = le nom de feuille ?
+                "dataset_name": nom,
+            },
+        })
+
 # --- Connexion à Airbyte ---
 
 client = AirbyteClient()
 workspace_id = get_workspace_id(client)
+
+# --- Reset après chaque run ---
+
+reset_workspace(client, workspace_id)
 
 # --- Récupération des ids de connecteurs ---
 
@@ -59,7 +81,7 @@ for src in sources:
 
 destination_config = {
     "host": "p8-postgres",
-    "port": 5433,
+    "port": 5432,
     "database": os.environ["POSTGRES_DB"],
     "username": os.environ["POSTGRES_USER"],
     "password": os.environ["POSTGRES_PASSWORD"], 
@@ -93,3 +115,4 @@ for src in sources:
     job = trigger_sync(client, connection_id)
     wait_for_sync(client, job["jobId"])
     print("sync lancé:", job)
+
