@@ -97,8 +97,9 @@ destination_id = get_or_create_destination(
 )
 print("destination:", destination["name"], "→", destination_id)
 
-# --- Création des connexions source vers destination ---
+# --- Boucle 1 : créer connexions + lancer les syncs (sans attendre) ---
 
+jobs = []
 for src in sources:
     name = src["name"]
     connection_id = get_or_create_connection(
@@ -108,11 +109,11 @@ for src in sources:
         destination_id,
         f"{name}_to_raw",
     )
-    print("connexion:", f"{name}_to_raw", "→", connection_id)
-
-# --- Lance la sync ---
-
     job = trigger_sync(client, connection_id)
-    wait_for_sync(client, job["jobId"])
-    print("sync lancé:", job)
+    jobs.append(job["jobId"])                
+    print("sync lancé:", f"{name}_to_raw")
 
+# --- Boucle 2 : attendre la fin de TOUS les syncs ---
+
+for job_id in jobs:
+    wait_for_sync(client, job_id)
