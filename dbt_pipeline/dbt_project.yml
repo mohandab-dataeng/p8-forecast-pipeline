@@ -1,6 +1,6 @@
 # ----- Projet DBT: dbt_meteoforecast -----
 
-name: 'dbt_meteoforecast'
+name: 'dbt_pipeline'
 version: '1.0.0'
 config-version: 2 
 
@@ -16,7 +16,7 @@ macro-paths: ["macros"]
 
 # --- Configuration des couches dbt ---
 models:
-  dbt_meteoforecast:
+  dbt_pipeline:
     staging:
       +materialized: view
     intermediate:

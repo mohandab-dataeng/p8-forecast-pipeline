@@ -1,0 +1,32 @@
+[0m21:00:17.175188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ae32d692b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ae319bbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ae319bb9d0>]}
+
+
+============================== 21:00:17.182525 | f587c0e1-bca8-48df-80a7-aca1c4b61ed0 ==============================
+[0m21:00:17.182525 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:00:17.183911 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'write_json': 'True', 'log_format': 'default', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'log_path': 'logs', 'profiles_dir': '.', 'target_path': 'None', 'use_colors': 'True', 'version_check': 'True', 'empty': 'False', 'invocation_command': 'dbt compile --select stg_weather --profiles-dir .', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'printer_width': '80', 'partial_parse': 'True', 'quiet': 'False', 'no_print': 'None', 'hints_enabled': 'True', 'debug': 'False'}
+[0m21:00:17.185062 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m21:00:17.186530 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.17434978, "process_in_blocks": "0", "process_kernel_time": 0.152984, "process_mem_max_rss": "110684", "process_out_blocks": "8", "process_user_time": 2.820719}
+[0m21:00:17.187488 [debug] [MainThread]: Command `dbt compile` failed at 21:00:17.187284 after 0.18 seconds
+[0m21:00:17.188205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ae319c9f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ae31972450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ae319d3240>]}
+[0m21:00:17.189010 [debug] [MainThread]: Flushing usage events
+[0m21:00:17.591177 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:32.492238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d5e83b52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d5ea948f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d5e7137890>]}
+
+
+============================== 21:18:32.498750 | 61d50f19-c1ef-426b-834f-3bacde35d80a ==============================
+[0m21:18:32.498750 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:18:32.499990 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps', 'hints_enabled': 'True', 'static_parser': 'True', 'log_path': 'logs', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True', 'version_check': 'True', 'quiet': 'False', 'profiles_dir': '/home/mohamed/.dbt', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'printer_width': '80', 'use_colors': 'True', 'warn_error': 'None'}
+[0m21:18:32.501508 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m21:18:32.502939 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.1675439, "process_in_blocks": "0", "process_kernel_time": 0.153974, "process_mem_max_rss": "110112", "process_out_blocks": "16", "process_user_time": 2.653569}
+[0m21:18:32.503944 [debug] [MainThread]: Command `dbt deps` failed at 21:18:32.503757 after 0.17 seconds
+[0m21:18:32.504734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d5e7191220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d5e7202690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d5e6fec5a0>]}
+[0m21:18:32.505600 [debug] [MainThread]: Flushing usage events
+[0m21:18:32.871459 [debug] [MainThread]: An error was encountered while trying to flush usage events

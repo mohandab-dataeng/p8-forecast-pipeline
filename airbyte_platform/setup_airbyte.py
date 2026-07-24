@@ -22,7 +22,7 @@ from resources import (
 # --- Lit la configuration déclarative du yml ---
 
 with open("./sources.yaml") as f:
-    config = yaml.safe_load(f) # dict
+    config = yaml.safe_load(f)
 
 sources = config["sources"]
 destination = config["destination"]
@@ -31,15 +31,15 @@ source_connector = config["source_connector"]
 # --- Recupere la structure du fichier excel ---
 
 for file in config["excel_files"]:
-    for feuille in pd.ExcelFile(file["url"]).sheet_names:   # (1) quelle clé pour l'URL ?
-        nom = f"{file['name']}_{feuille}"                     # (2) quelle clé pour le nom ?
-        sources.append({                                           # (3) quelle méthode pour ajouter à une liste ?
+    for feuille in pd.ExcelFile(file["url"]).sheet_names:
+        nom = f"{file['name']}_{feuille}"                
+        sources.append({                                           
             "name": nom,
             "config": {
                 "url": file["url"],
                 "format": "excel",
                 "provider": {"storage": "HTTPS"},
-                "reader_options": f'{{"sheet_name": "{feuille}"}}',  # (4) quelle variable = le nom de feuille ?
+                "reader_options": f'{{"sheet_name": "{feuille}"}}',
                 "dataset_name": nom,
             },
         })

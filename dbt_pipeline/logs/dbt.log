@@ -128,3 +128,921 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m13:59:05.788897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2d9d3fa030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2d9d285e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2d9d667850>]}
 [0m13:59:05.789982 [debug] [MainThread]: Flushing usage events
 [0m13:59:06.193011 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:53:44.651966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05d8bd160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05fbc0e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05c627b10>]}
+
+
+============================== 20:53:44.658289 | e5add363-646c-4477-a17b-22488fe7b771 ==============================
+[0m20:53:44.658289 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:53:44.659371 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'invocation_command': 'dbt ', 'version_check': 'True', 'quiet': 'False', 'printer_width': '80', 'write_json': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'debug': 'False', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'hints_enabled': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'partial_parse': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'empty': 'None', 'use_colors': 'True'}
+[0m20:53:44.906768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5add363-646c-4477-a17b-22488fe7b771', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05d77ed70>]}
+[0m20:53:44.933542 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:53:44.935773 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:53:44.937660 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.44942495, "process_in_blocks": "544", "process_kernel_time": 0.176817, "process_mem_max_rss": "113000", "process_out_blocks": "8", "process_user_time": 3.044854}
+[0m20:53:44.938740 [debug] [MainThread]: Command `cli deps` succeeded at 20:53:44.938552 after 0.45 seconds
+[0m20:53:44.939486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05c406030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05c489e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea05c87b850>]}
+[0m20:53:44.940290 [debug] [MainThread]: Flushing usage events
+[0m20:53:46.100203 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:02:31.297266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a33412b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a1f93ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a1f939d0>]}
+
+
+============================== 21:02:31.304570 | 8cb1011a-e6bd-4af4-aa79-70e061643ebc ==============================
+[0m21:02:31.304570 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:02:31.305791 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'debug': 'False', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'warn_error': 'None', 'target_path': 'None', 'hints_enabled': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'write_json': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'invocation_command': 'dbt compile --select stg_weather', 'indirect_selection': 'eager', 'log_format': 'default', 'static_parser': 'True'}
+[0m21:02:31.658647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8cb1011a-e6bd-4af4-aa79-70e061643ebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a3216d70>]}
+[0m21:02:31.793074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8cb1011a-e6bd-4af4-aa79-70e061643ebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a3e69e10>]}
+[0m21:02:31.794972 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:02:31.938631 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:02:32.313737 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:02:32.314663 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:02:32.315308 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:02:32.326797 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_meteoforecast.marts
+- models.dbt_meteoforecast.intermediate
+[0m21:02:32.334828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8cb1011a-e6bd-4af4-aa79-70e061643ebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a0516850>]}
+[0m21:02:32.582109 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:02:32.586788 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:02:32.656703 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:02:32.689031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8cb1011a-e6bd-4af4-aa79-70e061643ebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a012d400>]}
+[0m21:02:32.690172 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:02:32.690968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8cb1011a-e6bd-4af4-aa79-70e061643ebc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a012a350>]}
+[0m21:02:32.692161 [warn ] [MainThread]: [[33mWARNING[0m]: The selection criterion 'stg_weather' does not match any enabled nodes
+[0m21:02:32.695492 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m21:02:32.700555 [debug] [MainThread]: Command end result
+[0m21:02:32.758562 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:02:32.763557 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:02:32.768363 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:02:32.775830 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/run_results.json
+[0m21:02:32.777387 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.6436994, "process_in_blocks": "888", "process_kernel_time": 0.238883, "process_mem_max_rss": "125028", "process_out_blocks": "2784", "process_user_time": 4.132981}
+[0m21:02:32.778437 [debug] [MainThread]: Command `dbt compile` succeeded at 21:02:32.778232 after 1.65 seconds
+[0m21:02:32.779250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a0de7930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a2165fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b5a0941250>]}
+[0m21:02:32.780220 [debug] [MainThread]: Flushing usage events
+[0m21:02:33.157394 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:06:21.704571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36c0ad2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36acafed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36acaf9d0>]}
+
+
+============================== 21:06:21.712074 | c9e6c9a3-773b-4267-809f-157f85c7d868 ==============================
+[0m21:06:21.712074 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:06:21.713436 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'hints_enabled': 'True', 'warn_error': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'partial_parse': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt compile --select stg_weather', 'version_check': 'True', 'debug': 'False', 'introspect': 'True', 'no_print': 'None', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'write_json': 'True', 'cache_selected_only': 'False', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'quiet': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False'}
+[0m21:06:22.067864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c9e6c9a3-773b-4267-809f-157f85c7d868', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36bf7ad70>]}
+[0m21:06:22.219489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c9e6c9a3-773b-4267-809f-157f85c7d868', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36cb61e10>]}
+[0m21:06:22.221368 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:06:22.346084 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:06:22.749523 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:06:22.750524 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:06:22.751536 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:06:22.763388 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:06:22.772702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c9e6c9a3-773b-4267-809f-157f85c7d868', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b3693ae850>]}
+[0m21:06:23.048345 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:06:23.052887 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:06:23.074587 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:06:23.087615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c9e6c9a3-773b-4267-809f-157f85c7d868', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b368fcd8b0>]}
+[0m21:06:23.088625 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:06:23.089382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c9e6c9a3-773b-4267-809f-157f85c7d868', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b368fc5d30>]}
+[0m21:06:23.090481 [warn ] [MainThread]: [[33mWARNING[0m]: The selection criterion 'stg_weather' does not match any enabled nodes
+[0m21:06:23.092804 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m21:06:23.096565 [debug] [MainThread]: Command end result
+[0m21:06:23.148448 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:06:23.153410 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:06:23.157977 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:06:23.164180 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/run_results.json
+[0m21:06:23.165625 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.643082, "process_in_blocks": "0", "process_kernel_time": 0.218623, "process_mem_max_rss": "124872", "process_out_blocks": "2232", "process_user_time": 4.362488}
+[0m21:06:23.166614 [debug] [MainThread]: Command `dbt compile` succeeded at 21:06:23.166424 after 1.64 seconds
+[0m21:06:23.167472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36977b930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b36b08dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b369345190>]}
+[0m21:06:23.168274 [debug] [MainThread]: Flushing usage events
+[0m21:06:23.603983 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:08:11.612434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741cea39160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741d0db4e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741cd807b10>]}
+
+
+============================== 21:08:11.619713 | 1c06d5a0-e29d-45fc-87de-3fdf32575cf2 ==============================
+[0m21:08:11.619713 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:08:11.621554 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'introspect': 'True', 'invocation_command': 'dbt ', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'partial_parse': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'hints_enabled': 'True', 'debug': 'False', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'log_cache_events': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'write_json': 'True', 'no_print': 'None', 'static_parser': 'True', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager'}
+[0m21:08:11.920472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1c06d5a0-e29d-45fc-87de-3fdf32575cf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741ce90ed70>]}
+[0m21:08:11.947740 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:08:11.949668 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:08:11.951202 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.5244226, "process_in_blocks": "0", "process_kernel_time": 0.155619, "process_mem_max_rss": "113200", "process_out_blocks": "8", "process_user_time": 3.330846}
+[0m21:08:11.952552 [debug] [MainThread]: Command `cli deps` succeeded at 21:08:11.952270 after 0.53 seconds
+[0m21:08:11.953357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741cd5c2580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741cd466360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7741cd84f650>]}
+[0m21:08:11.954201 [debug] [MainThread]: Flushing usage events
+[0m21:08:12.346666 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:09:06.804010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fc0eb92b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbfabbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbfabb9d0>]}
+
+
+============================== 21:09:06.811124 | 0cdaee60-1db7-4a79-8f4b-ff5ea00d62ad ==============================
+[0m21:09:06.811124 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:09:06.812461 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'warn_error': 'None', 'empty': 'False', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'debug': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'printer_width': '80', 'use_colors': 'True', 'quiet': 'False', 'no_print': 'None', 'indirect_selection': 'eager', 'introspect': 'True', 'static_parser': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'log_format': 'default', 'invocation_command': 'dbt compile --select stg_weather', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m21:09:07.150218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0cdaee60-1db7-4a79-8f4b-ff5ea00d62ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fc0d86d70>]}
+[0m21:09:07.289445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0cdaee60-1db7-4a79-8f4b-ff5ea00d62ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fc196de10>]}
+[0m21:09:07.291936 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:09:07.416611 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:09:07.788173 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:09:07.789047 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:09:07.789748 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:09:07.801613 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:09:07.810377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0cdaee60-1db7-4a79-8f4b-ff5ea00d62ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbe1be850>]}
+[0m21:09:08.081746 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:09:08.086727 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:09:08.109339 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:09:08.124809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0cdaee60-1db7-4a79-8f4b-ff5ea00d62ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbddd18b0>]}
+[0m21:09:08.125990 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:09:08.126805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0cdaee60-1db7-4a79-8f4b-ff5ea00d62ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbddd5d30>]}
+[0m21:09:08.128135 [warn ] [MainThread]: [[33mWARNING[0m]: The selection criterion 'stg_weather' does not match any enabled nodes
+[0m21:09:08.130938 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m21:09:08.135580 [debug] [MainThread]: Command end result
+[0m21:09:08.198947 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:09:08.203851 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:09:08.208515 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:09:08.215946 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/run_results.json
+[0m21:09:08.217580 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.5863488, "process_in_blocks": "0", "process_kernel_time": 0.245118, "process_mem_max_rss": "124984", "process_out_blocks": "2224", "process_user_time": 4.262054}
+[0m21:09:08.218699 [debug] [MainThread]: Command `dbt compile` succeeded at 21:09:08.218490 after 1.59 seconds
+[0m21:09:08.219649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbe593930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbfe99fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0fbe109190>]}
+[0m21:09:08.220560 [debug] [MainThread]: Flushing usage events
+[0m21:09:08.577576 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:10:00.538831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a9310b9d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930f79fed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930f79f9d0>]}
+
+
+============================== 21:10:00.546176 | 70aedad4-8e98-43e0-9bb4-96d45abaa836 ==============================
+[0m21:10:00.546176 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:10:00.547439 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'no_print': 'None', 'printer_width': '80', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'hints_enabled': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt compile --select stg_weather', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'quiet': 'False', 'target_path': 'None', 'use_colors': 'True', 'empty': 'False', 'version_check': 'True'}
+[0m21:10:00.897349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '70aedad4-8e98-43e0-9bb4-96d45abaa836', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a931086ad70>]}
+[0m21:10:01.045724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '70aedad4-8e98-43e0-9bb4-96d45abaa836', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a9311451e10>]}
+[0m21:10:01.047647 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:10:01.174744 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:10:01.544210 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:10:01.545188 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:10:01.545877 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:10:01.557672 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:10:01.566108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '70aedad4-8e98-43e0-9bb4-96d45abaa836', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930dda6850>]}
+[0m21:10:01.833446 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:10:01.838434 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:10:01.862900 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:10:01.878181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '70aedad4-8e98-43e0-9bb4-96d45abaa836', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930d9b98b0>]}
+[0m21:10:01.879388 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:10:01.880215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70aedad4-8e98-43e0-9bb4-96d45abaa836', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930d9c1d30>]}
+[0m21:10:01.881358 [warn ] [MainThread]: [[33mWARNING[0m]: The selection criterion 'stg_weather' does not match any enabled nodes
+[0m21:10:01.883890 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m21:10:01.888102 [debug] [MainThread]: Command end result
+[0m21:10:01.947451 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:10:01.952446 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:10:01.957248 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:10:01.964798 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/run_results.json
+[0m21:10:01.966402 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.6004426, "process_in_blocks": "0", "process_kernel_time": 0.238731, "process_mem_max_rss": "124876", "process_out_blocks": "2232", "process_user_time": 4.294179}
+[0m21:10:01.967556 [debug] [MainThread]: Command `dbt compile` succeeded at 21:10:01.967315 after 1.60 seconds
+[0m21:10:01.968415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930e17f930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930f97dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a930dd3d190>]}
+[0m21:10:01.969284 [debug] [MainThread]: Flushing usage events
+[0m21:10:02.410815 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:12:11.730499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4d1752b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4bdc7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4bdc79d0>]}
+
+
+============================== 21:12:11.737743 | 58786284-0036-462b-a16e-5c5eb0223d15 ==============================
+[0m21:12:11.737743 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:12:11.739091 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'write_json': 'True', 'partial_parse': 'True', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'no_print': 'None', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'static_parser': 'True', 'introspect': 'True', 'use_colors': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'invocation_command': 'dbt compile --select stg_weather_tables', 'hints_enabled': 'True', 'empty': 'False'}
+[0m21:12:12.086039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '58786284-0036-462b-a16e-5c5eb0223d15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4ce4ed70>]}
+[0m21:12:12.227291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '58786284-0036-462b-a16e-5c5eb0223d15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4e171e10>]}
+[0m21:12:12.229260 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:12:12.357000 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:12:12.729747 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:12:12.730728 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:12:12.731434 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:12:12.743069 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:12:12.751562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '58786284-0036-462b-a16e-5c5eb0223d15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4a32e850>]}
+[0m21:12:13.016812 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:12:13.021700 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:12:13.045634 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:12:13.061433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '58786284-0036-462b-a16e-5c5eb0223d15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f49f498b0>]}
+[0m21:12:13.062588 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:12:13.063466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '58786284-0036-462b-a16e-5c5eb0223d15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f49f41d30>]}
+[0m21:12:13.066834 [info ] [MainThread]: 
+[0m21:12:13.067671 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:12:13.068343 [info ] [MainThread]: 
+[0m21:12:13.069596 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:12:13.077834 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:12:13.148928 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:12:13.149872 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:12:13.150655 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:12:13.156054 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "p8-postgres" to address: Temporary failure in name resolution
+
+[0m21:12:13.160900 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:12:13.161819 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m21:12:13.162632 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
+[0m21:12:13.163266 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m21:12:13.163932 [debug] [ThreadPool]: On list_meteoforecast_raw: No close available on handle
+[0m21:12:13.165381 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:12:13.166198 [debug] [MainThread]: Connection 'list_meteoforecast_raw' was properly closed.
+[0m21:12:13.167287 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Database Error
+  could not translate host name "p8-postgres" to address: Temporary failure in name resolution
+  
+[0m21:12:13.168813 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.6022005, "process_in_blocks": "1696", "process_kernel_time": 0.247843, "process_mem_max_rss": "128912", "process_out_blocks": "1136", "process_user_time": 4.115405}
+[0m21:12:13.169967 [debug] [MainThread]: Command `dbt compile` failed at 21:12:13.169678 after 1.60 seconds
+[0m21:12:13.171035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f49f3dcc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4bfa1fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x798f4a73e2d0>]}
+[0m21:12:13.172644 [debug] [MainThread]: Flushing usage events
+[0m21:12:13.557120 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:15:16.660763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63fa7352b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f9387ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f93879d0>]}
+
+
+============================== 21:15:16.667759 | 7d5d57dc-9449-494d-845e-0b7620b34d67 ==============================
+[0m21:15:16.667759 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:15:16.669000 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'log_cache_events': 'False', 'debug': 'False', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'hints_enabled': 'True', 'printer_width': '80', 'version_check': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'introspect': 'True', 'quiet': 'False', 'no_print': 'None', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'log_format': 'default', 'invocation_command': 'dbt compile --select stg_weather_tables', 'static_parser': 'True'}
+[0m21:15:17.003071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7d5d57dc-9449-494d-845e-0b7620b34d67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63fa60ed70>]}
+[0m21:15:17.135271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7d5d57dc-9449-494d-845e-0b7620b34d67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63fb25de10>]}
+[0m21:15:17.137877 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:15:17.303855 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:15:17.669224 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:15:17.670154 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:15:17.670821 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:15:17.682025 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:15:17.690563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7d5d57dc-9449-494d-845e-0b7620b34d67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f790a850>]}
+[0m21:15:17.961485 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:15:17.966757 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:15:17.990787 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:15:18.005509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7d5d57dc-9449-494d-845e-0b7620b34d67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f75258b0>]}
+[0m21:15:18.006622 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:15:18.007403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7d5d57dc-9449-494d-845e-0b7620b34d67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f7521d30>]}
+[0m21:15:18.010828 [info ] [MainThread]: 
+[0m21:15:18.011763 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:15:18.012499 [info ] [MainThread]: 
+[0m21:15:18.013781 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:15:18.022340 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:15:18.088103 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:15:18.089260 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:15:18.090150 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:15:18.163058 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "meteoforecast" to address: Temporary failure in name resolution
+
+[0m21:15:18.171505 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:15:18.172621 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m21:15:18.173633 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
+[0m21:15:18.174432 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m21:15:18.175151 [debug] [ThreadPool]: On list_meteoforecast_raw: No close available on handle
+[0m21:15:18.177041 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:15:18.177917 [debug] [MainThread]: Connection 'list_meteoforecast_raw' was properly closed.
+[0m21:15:18.179069 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Database Error
+  could not translate host name "meteoforecast" to address: Temporary failure in name resolution
+  
+[0m21:15:18.180785 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.6775578, "process_in_blocks": "0", "process_kernel_time": 0.245897, "process_mem_max_rss": "129004", "process_out_blocks": "1136", "process_user_time": 4.304213}
+[0m21:15:18.182058 [debug] [MainThread]: Command `dbt compile` failed at 21:15:18.181775 after 1.68 seconds
+[0m21:15:18.183049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f751dcc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f9559fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e63f7d222d0>]}
+[0m21:15:18.183979 [debug] [MainThread]: Flushing usage events
+[0m21:15:18.561842 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:17:04.344189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d467692d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d467557fed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d467557f9d0>]}
+
+
+============================== 21:17:04.352255 | 97052980-4f30-447d-b4c7-99309a06b840 ==============================
+[0m21:17:04.352255 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:17:04.353667 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'empty': 'False', 'target_path': 'None', 'quiet': 'False', 'hints_enabled': 'True', 'version_check': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'warn_error': 'None', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'invocation_command': 'dbt compile --select stg_weather_tables', 'log_format': 'default', 'no_print': 'None', 'printer_width': '80', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'static_parser': 'True', 'indirect_selection': 'eager'}
+[0m21:17:04.692405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '97052980-4f30-447d-b4c7-99309a06b840', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4676802d70>]}
+[0m21:17:04.836442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '97052980-4f30-447d-b4c7-99309a06b840', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4677355e10>]}
+[0m21:17:04.838366 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:17:04.974432 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:17:05.337464 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:17:05.338371 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:17:05.339071 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:17:05.350471 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:17:05.358602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '97052980-4f30-447d-b4c7-99309a06b840', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4673ffe850>]}
+[0m21:17:05.613833 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:17:05.618674 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:17:05.641543 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:17:05.655705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '97052980-4f30-447d-b4c7-99309a06b840', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4673fa98b0>]}
+[0m21:17:05.656871 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 478 macros
+[0m21:17:05.657728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97052980-4f30-447d-b4c7-99309a06b840', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4673719d30>]}
+[0m21:17:05.661160 [info ] [MainThread]: 
+[0m21:17:05.662036 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:17:05.662721 [info ] [MainThread]: 
+[0m21:17:05.663886 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:17:05.672521 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:17:05.743389 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:17:05.744517 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:17:05.745456 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:17:05.791632 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.046 seconds
+[0m21:17:05.795098 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:17:05.796484 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:17:05.809341 [debug] [MainThread]: Using postgres connection "master"
+[0m21:17:05.810956 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:17:05.812377 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:17:05.840187 [debug] [MainThread]: SQL status: SELECT 0 in 0.028 seconds
+[0m21:17:05.843009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97052980-4f30-447d-b4c7-99309a06b840', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d467339a5b0>]}
+[0m21:17:05.844433 [debug] [MainThread]: On master: ROLLBACK
+[0m21:17:05.845752 [debug] [MainThread]: On master: Close
+[0m21:17:05.854596 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:17:05.855892 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:17:05.857010 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:17:05.883357 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'dbt_utils' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m21:17:05.884846 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:17:05.886308 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'dbt_utils' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m21:17:05.889147 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:17:05.890134 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:17:05.891349 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    'dbt_utils' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m21:17:05.892915 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.7371355, "process_in_blocks": "6224", "process_kernel_time": 0.236845, "process_mem_max_rss": "133220", "process_out_blocks": "1168", "process_user_time": 4.300202}
+[0m21:17:05.893892 [debug] [MainThread]: Command `dbt compile` failed at 21:17:05.893714 after 1.74 seconds
+[0m21:17:05.894752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4675751fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4673fdfee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4673fdfd80>]}
+[0m21:17:05.895632 [debug] [MainThread]: Flushing usage events
+[0m21:17:06.606531 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:09.868758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d73706392b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d73729b8f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d736f40b890>]}
+
+
+============================== 21:18:09.875201 | 39f3cb97-579b-4020-9d4d-d71b04fb02c5 ==============================
+[0m21:18:09.875201 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:18:09.876514 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'cache_selected_only': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'indirect_selection': 'eager', 'target_path': 'None', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'warn_error': 'None', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'log_cache_events': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'no_print': 'None', 'invocation_command': 'dbt deps', 'debug': 'False', 'static_parser': 'True', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'log_format': 'default', 'empty': 'None', 'fail_fast': 'False'}
+[0m21:18:10.108169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '39f3cb97-579b-4020-9d4d-d71b04fb02c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d737050ed70>]}
+[0m21:18:10.132624 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:18:10.134460 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:18:10.136255 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.4297266, "process_in_blocks": "0", "process_kernel_time": 0.169905, "process_mem_max_rss": "112984", "process_out_blocks": "16", "process_user_time": 3.001329}
+[0m21:18:10.137398 [debug] [MainThread]: Command `dbt deps` succeeded at 21:18:10.137180 after 0.43 seconds
+[0m21:18:10.138207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d736f1c6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d736f06e470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d736f453a50>]}
+[0m21:18:10.139021 [debug] [MainThread]: Flushing usage events
+[0m21:18:10.536775 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:21:01.590051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d310592b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d333b0f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d2fc2f890>]}
+
+
+============================== 21:21:01.596311 | fffed752-3c1b-402d-9c59-2d537f672f78 ==============================
+[0m21:21:01.596311 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:21:01.597538 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'no_print': 'None', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'version_check': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'empty': 'None', 'warn_error': 'None', 'quiet': 'False', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'static_parser': 'True', 'write_json': 'True', 'debug': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'partial_parse': 'True', 'invocation_command': 'dbt deps', 'log_cache_events': 'False', 'target_path': 'None', 'fail_fast': 'False', 'cache_selected_only': 'False', 'use_colors': 'True'}
+[0m21:21:01.866862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fffed752-3c1b-402d-9c59-2d537f672f78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d30d32d70>]}
+[0m21:21:01.894572 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:21:01.896120 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:21:01.897617 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.4642988, "process_in_blocks": "0", "process_kernel_time": 0.188026, "process_mem_max_rss": "113028", "process_out_blocks": "8", "process_user_time": 3.006423}
+[0m21:21:01.898663 [debug] [MainThread]: Command `dbt deps` succeeded at 21:21:01.898453 after 0.47 seconds
+[0m21:21:01.899508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d2fbe6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d2fa8e470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x794d2fe77a50>]}
+[0m21:21:01.900303 [debug] [MainThread]: Flushing usage events
+[0m21:21:02.284281 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:21:28.421658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b7137b52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b715d48f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b71253b890>]}
+
+
+============================== 21:21:28.427900 | eae562ed-33a6-4487-b21c-9e79e7845f3b ==============================
+[0m21:21:28.427900 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:21:28.429041 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'version_check': 'True', 'fail_fast': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'warn_error': 'None', 'invocation_command': 'dbt deps', 'debug': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'hints_enabled': 'True', 'no_print': 'None', 'log_format': 'default', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False'}
+[0m21:21:28.658601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eae562ed-33a6-4487-b21c-9e79e7845f3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b713682d70>]}
+[0m21:21:28.685209 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:21:28.687083 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:21:28.688866 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.42143023, "process_in_blocks": "0", "process_kernel_time": 0.163871, "process_mem_max_rss": "113104", "process_out_blocks": "0", "process_user_time": 2.98466}
+[0m21:21:28.689983 [debug] [MainThread]: Command `dbt deps` succeeded at 21:21:28.689766 after 0.42 seconds
+[0m21:21:28.690922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b7122ee690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b712392470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b712787a50>]}
+[0m21:21:28.691878 [debug] [MainThread]: Flushing usage events
+[0m21:21:29.046475 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:22:54.047435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185b95d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185dffcf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185a533890>]}
+
+
+============================== 21:22:54.054054 | ccdfe35d-a300-4226-bb6a-1458a9588aa6 ==============================
+[0m21:22:54.054054 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:22:54.055436 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'debug': 'False', 'hints_enabled': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'invocation_command': 'dbt deps', 'warn_error': 'None', 'version_check': 'True', 'introspect': 'True', 'no_print': 'None', 'fail_fast': 'False', 'write_json': 'True', 'static_parser': 'True', 'empty': 'None', 'indirect_selection': 'eager', 'printer_width': '80', 'partial_parse': 'True'}
+[0m21:22:54.321460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ccdfe35d-a300-4226-bb6a-1458a9588aa6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185b636d70>]}
+[0m21:22:54.348564 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-u44rzmds'
+[0m21:22:54.349859 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m21:22:54.425250 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m21:22:54.428513 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m21:22:54.475446 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m21:22:54.505964 [info ] [MainThread]: Updating lock file in file path: /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/package-lock.yml
+[0m21:22:54.511479 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-6gmm72w6'
+[0m21:22:54.518807 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m21:22:54.846355 [info ] [MainThread]: Installed from version 1.4.1
+[0m21:22:54.847215 [info ] [MainThread]: Up to date!
+[0m21:22:54.848014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ccdfe35d-a300-4226-bb6a-1458a9588aa6', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185cd20f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185a603570>]}
+[0m21:22:54.849692 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.99735624, "process_in_blocks": "8", "process_kernel_time": 0.199036, "process_mem_max_rss": "116720", "process_out_blocks": "2144", "process_user_time": 3.342606}
+[0m21:22:54.850734 [debug] [MainThread]: Command `dbt deps` succeeded at 21:22:54.850549 after 1.00 seconds
+[0m21:22:54.851466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185a34ce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185a3837a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c185a3834d0>]}
+[0m21:22:54.852355 [debug] [MainThread]: Flushing usage events
+[0m21:22:55.214052 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:23:11.819639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ca7b52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c93b7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c93b79d0>]}
+
+
+============================== 21:23:11.826525 | 30d8f7a4-4140-4ee2-bc56-54464ff531b2 ==============================
+[0m21:23:11.826525 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:23:11.827709 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'introspect': 'True', 'debug': 'False', 'empty': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'printer_width': '80', 'version_check': 'True', 'invocation_command': 'dbt compile --select stg_weather_tables', 'warn_error': 'None', 'no_print': 'None', 'static_parser': 'True', 'quiet': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'use_colors': 'True', 'target_path': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m21:23:12.154440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2ca682d70>]}
+[0m21:23:12.291145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c967b020>]}
+[0m21:23:12.292893 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:23:12.426170 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:23:12.766526 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m21:23:12.767727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c7d8df50>]}
+[0m21:23:15.516172 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:23:15.525202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c81723f0>]}
+[0m21:23:15.743591 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:23:15.748704 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:23:15.772082 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:23:15.787260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c6d4f5b0>]}
+[0m21:23:15.788467 [info ] [MainThread]: Found 1 model, 2 seeds, 4 sources, 594 macros
+[0m21:23:15.789337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c69caa90>]}
+[0m21:23:15.792750 [info ] [MainThread]: 
+[0m21:23:15.793643 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:23:15.794349 [info ] [MainThread]: 
+[0m21:23:15.795550 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:23:15.804827 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:23:15.868894 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:23:15.870188 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:23:15.871228 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:23:15.900745 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.029 seconds
+[0m21:23:15.905100 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:23:15.906801 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:23:15.919090 [debug] [MainThread]: Using postgres connection "master"
+[0m21:23:15.920224 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:23:15.921108 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:23:15.942556 [debug] [MainThread]: SQL status: SELECT 0 in 0.021 seconds
+[0m21:23:15.945196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '30d8f7a4-4140-4ee2-bc56-54464ff531b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c69dba10>]}
+[0m21:23:15.946380 [debug] [MainThread]: On master: ROLLBACK
+[0m21:23:15.947829 [debug] [MainThread]: On master: Close
+[0m21:23:15.952781 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:23:15.953918 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:23:15.954855 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:23:15.984545 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:23:15.985685 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:23:15.986543 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:23:16.009175 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.022 seconds
+[0m21:23:16.018886 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:23:16.020414 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:23:16.028615 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'rel' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m21:23:16.030037 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:23:16.031434 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'rel' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m21:23:16.033641 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:23:16.034445 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:23:16.035784 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    'rel' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m21:23:16.037263 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 4.387675, "process_in_blocks": "0", "process_kernel_time": 0.268983, "process_mem_max_rss": "140404", "process_out_blocks": "2816", "process_user_time": 6.691578}
+[0m21:23:16.038247 [debug] [MainThread]: Command `dbt compile` failed at 21:23:16.038072 after 4.39 seconds
+[0m21:23:16.039031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c6926c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c6da8910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2c6da84b0>]}
+[0m21:23:16.039790 [debug] [MainThread]: Flushing usage events
+[0m21:23:16.428982 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:24:15.463682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9159ba52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91587a7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91587a79d0>]}
+
+
+============================== 21:24:15.471386 | d2535acf-6f3f-49f5-95a9-6124ce63aa30 ==============================
+[0m21:24:15.471386 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:24:15.472507 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'printer_width': '80', 'introspect': 'True', 'version_check': 'True', 'write_json': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt compile --select stg_weather_tables', 'log_cache_events': 'False', 'empty': 'False', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'static_parser': 'True', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'cache_selected_only': 'False'}
+[0m21:24:15.807227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd2535acf-6f3f-49f5-95a9-6124ce63aa30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9159a72d70>]}
+[0m21:24:15.947730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd2535acf-6f3f-49f5-95a9-6124ce63aa30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9158a6b020>]}
+[0m21:24:15.949785 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:24:16.087007 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:24:16.446833 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:24:16.447784 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:24:16.448446 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:24:16.458911 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:24:16.466763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd2535acf-6f3f-49f5-95a9-6124ce63aa30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d915717ad50>]}
+[0m21:24:16.724470 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:24:16.729533 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:24:16.752540 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:24:16.766765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd2535acf-6f3f-49f5-95a9-6124ce63aa30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d915713a4e0>]}
+[0m21:24:16.767905 [info ] [MainThread]: Found 2 seeds, 1 model, 4 sources, 594 macros
+[0m21:24:16.768734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2535acf-6f3f-49f5-95a9-6124ce63aa30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9157167230>]}
+[0m21:24:16.772086 [info ] [MainThread]: 
+[0m21:24:16.772992 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:24:16.773718 [info ] [MainThread]: 
+[0m21:24:16.774819 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:24:16.782992 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:24:16.846500 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:24:16.847461 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:24:16.848238 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:24:16.873478 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.025 seconds
+[0m21:24:16.877120 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:24:16.878527 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:24:16.890927 [debug] [MainThread]: Using postgres connection "master"
+[0m21:24:16.892066 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:24:16.893012 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:24:16.913907 [debug] [MainThread]: SQL status: SELECT 0 in 0.021 seconds
+[0m21:24:16.916639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2535acf-6f3f-49f5-95a9-6124ce63aa30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91565a2c30>]}
+[0m21:24:16.917669 [debug] [MainThread]: On master: ROLLBACK
+[0m21:24:16.919020 [debug] [MainThread]: On master: Close
+[0m21:24:16.923928 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:24:16.925081 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:24:16.925943 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:24:16.971573 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:24:16.972629 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:24:16.973441 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:24:16.994408 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.021 seconds
+[0m21:24:17.012579 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:24:17.014246 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:24:17.027505 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a source named 'raw.weather_ichtegem_011024' which was not found
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:24:17.029096 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:24:17.030788 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a source named 'raw.weather_ichtegem_011024' which was not found
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql).
+[0m21:24:17.034072 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:24:17.035136 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:24:17.036375 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a source named 'raw.weather_ichtegem_011024' which was not found
+    
+    > in macro stg_weather (macros/stg_weather.sql)
+    > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:24:17.037950 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.7281314, "process_in_blocks": "240", "process_kernel_time": 0.22988, "process_mem_max_rss": "134324", "process_out_blocks": "1456", "process_user_time": 4.051885}
+[0m21:24:17.039125 [debug] [MainThread]: Command `dbt compile` failed at 21:24:17.038920 after 1.73 seconds
+[0m21:24:17.039986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9158b85fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91561e5910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91561e59c0>]}
+[0m21:24:17.040877 [debug] [MainThread]: Flushing usage events
+[0m21:24:17.421901 [debug] [MainThread]: An error was encountered while trying to flush usage events

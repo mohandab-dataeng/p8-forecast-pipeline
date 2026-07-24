@@ -85,17 +85,14 @@ def delete_destination(client, destination_id):
     resp.raise_for_status()
 
 def reset_workspace(client, workspace_id):
-    # 1. connexions (elles dépendent des sources et destinations)
     conns = client._request("GET", f"/connections?workspaceId={workspace_id}")
     for c in conns["data"]:
         delete_connection(client, c["connectionId"])
 
-    # 2. sources
     srcs = client._request("GET", f"/sources?workspaceId={workspace_id}")
     for s in srcs["data"]:
         delete_source(client, s["sourceId"])
 
-    # 3. destinations
     dests = client._request("GET", f"/destinations?workspaceId={workspace_id}")
     for d in dests["data"]:
         delete_destination(client, d["destinationId"])
