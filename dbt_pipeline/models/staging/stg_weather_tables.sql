@@ -1,4 +1,5 @@
 {{ config(materialized = 'view') }}
+depends_on: {{ ref('mapping_vent_direction') }}
 
 -- 1. Récupération dynamique de toutes les tables 'weather_%' dans le schéma 'raw' essentiel permet la scalabilite.
 {% set raw_tables = dbt_utils.get_relations_by_pattern(
@@ -18,7 +19,7 @@
     {% endif %}
 
     SELECT * FROM (
-        {{ stg_weather('raw', t.identifier, station_id) }}
+        {{ stg_weather(t, station_id) }}
     )
 
     {% if not loop.last %} UNION ALL {% endif %}

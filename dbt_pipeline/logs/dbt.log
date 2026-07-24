@@ -1046,3 +1046,1956 @@ Runtime Error
 [0m21:24:17.039986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9158b85fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91561e5910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d91561e59c0>]}
 [0m21:24:17.040877 [debug] [MainThread]: Flushing usage events
 [0m21:24:17.421901 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:46:35.777038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c617412b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c60393ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c603939d0>]}
+
+
+============================== 21:46:35.784009 | 405eaa7b-18fd-4a9a-b3aa-c093b08305df ==============================
+[0m21:46:35.784009 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:46:35.785228 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'invocation_command': 'dbt compile --select stg_weather_tables', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'target_path': 'None', 'write_json': 'True', 'hints_enabled': 'True', 'empty': 'False', 'log_format': 'default', 'no_print': 'None', 'use_colors': 'True', 'static_parser': 'True', 'introspect': 'True', 'printer_width': '80', 'version_check': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline'}
+[0m21:46:36.162123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '405eaa7b-18fd-4a9a-b3aa-c093b08305df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c61616d70>]}
+[0m21:46:36.299498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '405eaa7b-18fd-4a9a-b3aa-c093b08305df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c60453020>]}
+[0m21:46:36.301298 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:46:36.436652 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:46:36.811705 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:46:36.812643 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:46:36.813311 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:46:36.825051 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:46:36.833611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '405eaa7b-18fd-4a9a-b3aa-c093b08305df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c5edf3350>]}
+[0m21:46:37.106666 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:46:37.111564 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:46:37.134484 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:46:37.149189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '405eaa7b-18fd-4a9a-b3aa-c093b08305df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c5ed1ab70>]}
+[0m21:46:37.150193 [info ] [MainThread]: Found 2 seeds, 2 models, 16 sources, 594 macros
+[0m21:46:37.151040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '405eaa7b-18fd-4a9a-b3aa-c093b08305df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c5e5fb930>]}
+[0m21:46:37.154443 [info ] [MainThread]: 
+[0m21:46:37.155359 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:46:37.156196 [info ] [MainThread]: 
+[0m21:46:37.157872 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:46:37.166545 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:46:37.237113 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:46:37.238193 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:46:37.239049 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:46:37.264142 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.025 seconds
+[0m21:46:37.267494 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:46:37.268886 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:46:37.281663 [debug] [MainThread]: Using postgres connection "master"
+[0m21:46:37.282758 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:46:37.283679 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:46:37.305992 [debug] [MainThread]: SQL status: SELECT 0 in 0.022 seconds
+[0m21:46:37.308769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '405eaa7b-18fd-4a9a-b3aa-c093b08305df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c5dd9f860>]}
+[0m21:46:37.310019 [debug] [MainThread]: On master: ROLLBACK
+[0m21:46:37.311471 [debug] [MainThread]: On master: Close
+[0m21:46:37.316495 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:46:37.317799 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:46:37.318804 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:46:37.359144 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:46:37.360170 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:46:37.361042 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:46:37.381255 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.020 seconds
+[0m21:46:37.395360 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:46:37.396881 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:46:37.405042 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'table_name' is undefined
+[0m21:46:37.406468 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:46:37.407807 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'table_name' is undefined.
+[0m21:46:37.410155 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:46:37.411309 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:46:37.412435 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    'table_name' is undefined
+[0m21:46:37.414048 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.80358, "process_in_blocks": "0", "process_kernel_time": 0.219854, "process_mem_max_rss": "135088", "process_out_blocks": "1512", "process_user_time": 4.191232}
+[0m21:46:37.415097 [debug] [MainThread]: Command `dbt compile` failed at 21:46:37.414908 after 1.80 seconds
+[0m21:46:37.416104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c60569fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c5cd69bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2c5cd69c80>]}
+[0m21:46:37.417126 [debug] [MainThread]: Flushing usage events
+[0m21:46:37.806842 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:48:15.278505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b187eb92b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b186abbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b186abb9d0>]}
+
+
+============================== 21:48:15.285231 | b1d8aa78-5546-493c-935f-3ba029c33970 ==============================
+[0m21:48:15.285231 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:48:15.286487 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'debug': 'False', 'quiet': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'version_check': 'True', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'target_path': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'printer_width': '80', 'hints_enabled': 'True', 'warn_error': 'None', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'use_experimental_parser': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'invocation_command': 'dbt compile --select stg_weather_tables'}
+[0m21:48:15.627791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b1d8aa78-5546-493c-935f-3ba029c33970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b187d86d70>]}
+[0m21:48:15.770142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b1d8aa78-5546-493c-935f-3ba029c33970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b186d7f020>]}
+[0m21:48:15.771993 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:48:15.915263 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:48:16.312606 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:48:16.313531 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:48:16.314204 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:48:16.326164 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:48:16.334059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b1d8aa78-5546-493c-935f-3ba029c33970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b18519b350>]}
+[0m21:48:16.597401 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:48:16.601920 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:48:16.625436 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:48:16.641132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b1d8aa78-5546-493c-935f-3ba029c33970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b1851ceb70>]}
+[0m21:48:16.642292 [info ] [MainThread]: Found 2 seeds, 2 models, 16 sources, 594 macros
+[0m21:48:16.643127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1d8aa78-5546-493c-935f-3ba029c33970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b1849b7930>]}
+[0m21:48:16.646823 [info ] [MainThread]: 
+[0m21:48:16.647825 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:48:16.648619 [info ] [MainThread]: 
+[0m21:48:16.649820 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:48:16.658767 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:48:16.729894 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:48:16.731351 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:48:16.732606 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:48:16.759312 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.027 seconds
+[0m21:48:16.762772 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:48:16.764026 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:48:16.775643 [debug] [MainThread]: Using postgres connection "master"
+[0m21:48:16.776608 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:48:16.777405 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:48:16.799518 [debug] [MainThread]: SQL status: SELECT 0 in 0.022 seconds
+[0m21:48:16.802192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1d8aa78-5546-493c-935f-3ba029c33970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b184147860>]}
+[0m21:48:16.803352 [debug] [MainThread]: On master: ROLLBACK
+[0m21:48:16.804458 [debug] [MainThread]: On master: Close
+[0m21:48:16.810038 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:48:16.811353 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:48:16.812353 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:48:16.853931 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:48:16.855036 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:48:16.855967 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:48:16.876921 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.021 seconds
+[0m21:48:16.891572 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:48:16.893030 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:48:16.900966 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'table_name' is undefined
+[0m21:48:16.902311 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:48:16.903860 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  'table_name' is undefined.
+[0m21:48:16.906700 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:48:16.907601 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:48:16.908734 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    'table_name' is undefined
+[0m21:48:16.910159 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.7917275, "process_in_blocks": "0", "process_kernel_time": 0.211969, "process_mem_max_rss": "135104", "process_out_blocks": "1512", "process_user_time": 4.28739}
+[0m21:48:16.911237 [debug] [MainThread]: Command `dbt compile` failed at 21:48:16.911050 after 1.79 seconds
+[0m21:48:16.912061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b186e99fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b1835e5bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72b1835e5c80>]}
+[0m21:48:16.912949 [debug] [MainThread]: Flushing usage events
+[0m21:48:17.298317 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:53:30.503390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d098452b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d08497ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d084979d0>]}
+
+
+============================== 21:53:30.510277 | 55f2090f-14b0-4450-a304-4cf8f504d690 ==============================
+[0m21:53:30.510277 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:53:30.511545 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'empty': 'False', 'use_colors': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'invocation_command': 'dbt compile --select stg_weather_tables', 'write_json': 'True', 'printer_width': '80', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'warn_error': 'None', 'no_print': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'debug': 'False', 'quiet': 'False', 'target_path': 'None', 'static_parser': 'True'}
+[0m21:53:30.852678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '55f2090f-14b0-4450-a304-4cf8f504d690', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d0971ad70>]}
+[0m21:53:30.997050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '55f2090f-14b0-4450-a304-4cf8f504d690', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d08557020>]}
+[0m21:53:30.998927 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:53:31.134758 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:53:31.518796 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:53:31.519773 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:53:31.520503 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:53:31.532048 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m21:53:31.540423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '55f2090f-14b0-4450-a304-4cf8f504d690', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d06df7350>]}
+[0m21:53:31.839793 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:53:31.844641 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:53:31.867895 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:53:31.882952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '55f2090f-14b0-4450-a304-4cf8f504d690', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d06d6eb70>]}
+[0m21:53:31.884056 [info ] [MainThread]: Found 2 seeds, 2 models, 16 sources, 594 macros
+[0m21:53:31.884849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '55f2090f-14b0-4450-a304-4cf8f504d690', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d065ef930>]}
+[0m21:53:31.888250 [info ] [MainThread]: 
+[0m21:53:31.889024 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:53:31.889691 [info ] [MainThread]: 
+[0m21:53:31.890804 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:53:31.899251 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:53:31.969149 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:53:31.970198 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:53:31.971114 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:53:31.997237 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.026 seconds
+[0m21:53:32.000382 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:53:32.001638 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:53:32.012889 [debug] [MainThread]: Using postgres connection "master"
+[0m21:53:32.013937 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:53:32.014768 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:53:32.035692 [debug] [MainThread]: SQL status: SELECT 0 in 0.021 seconds
+[0m21:53:32.038363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '55f2090f-14b0-4450-a304-4cf8f504d690', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d05da3860>]}
+[0m21:53:32.039383 [debug] [MainThread]: On master: ROLLBACK
+[0m21:53:32.040694 [debug] [MainThread]: On master: Close
+[0m21:53:32.046071 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:53:32.047381 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:53:32.048216 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:53:32.087977 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:53:32.089054 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:53:32.089954 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:53:32.110610 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.020 seconds
+[0m21:53:32.128228 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:53:32.129828 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:53:32.137665 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a node named 'wind_direction_mapping' which was not found
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:53:32.139060 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:53:32.140251 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a node named 'wind_direction_mapping' which was not found
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql).
+[0m21:53:32.142567 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:53:32.143898 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:53:32.145144 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a node named 'wind_direction_mapping' which was not found
+    
+    > in macro stg_weather (macros/stg_weather.sql)
+    > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:53:32.147040 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.8008877, "process_in_blocks": "0", "process_kernel_time": 0.236805, "process_mem_max_rss": "135316", "process_out_blocks": "1512", "process_user_time": 4.147592}
+[0m21:53:32.148140 [debug] [MainThread]: Command `dbt compile` failed at 21:53:32.147958 after 1.80 seconds
+[0m21:53:32.148959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d0866dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d04d6df40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8d04d6dff0>]}
+[0m21:53:32.149899 [debug] [MainThread]: Flushing usage events
+[0m21:53:32.520828 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:55:04.037250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787789eb52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787788ab7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787788ab79d0>]}
+
+
+============================== 21:55:04.044113 | 67da5764-4f04-4dae-b784-aeb8290c3f72 ==============================
+[0m21:55:04.044113 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:55:04.045353 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'target_path': 'None', 'cache_selected_only': 'False', 'write_json': 'True', 'version_check': 'True', 'hints_enabled': 'True', 'static_parser': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'debug': 'False', 'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'invocation_command': 'dbt compile --select stg_weather_tables', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'partial_parse': 'True', 'empty': 'False'}
+[0m21:55:04.385732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '67da5764-4f04-4dae-b784-aeb8290c3f72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787789d82d70>]}
+[0m21:55:04.553404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '67da5764-4f04-4dae-b784-aeb8290c3f72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787788d7b020>]}
+[0m21:55:04.555476 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:55:04.709394 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:55:05.111741 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:55:05.112684 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:55:05.113268 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:55:05.123846 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:55:05.131563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '67da5764-4f04-4dae-b784-aeb8290c3f72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787787193350>]}
+[0m21:55:05.447382 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:55:05.451992 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:55:05.474931 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:55:05.490246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '67da5764-4f04-4dae-b784-aeb8290c3f72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787787172b70>]}
+[0m21:55:05.491494 [info ] [MainThread]: Found 2 seeds, 2 models, 16 sources, 594 macros
+[0m21:55:05.492409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '67da5764-4f04-4dae-b784-aeb8290c3f72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7877869ff930>]}
+[0m21:55:05.496579 [info ] [MainThread]: 
+[0m21:55:05.497630 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:55:05.498567 [info ] [MainThread]: 
+[0m21:55:05.499896 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:55:05.509206 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:55:05.595776 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:55:05.596873 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:55:05.597735 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:55:05.623985 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.026 seconds
+[0m21:55:05.627630 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:55:05.629291 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:55:05.642131 [debug] [MainThread]: Using postgres connection "master"
+[0m21:55:05.643166 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:55:05.644016 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:55:05.664587 [debug] [MainThread]: SQL status: SELECT 0 in 0.020 seconds
+[0m21:55:05.667094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '67da5764-4f04-4dae-b784-aeb8290c3f72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787786143860>]}
+[0m21:55:05.668238 [debug] [MainThread]: On master: ROLLBACK
+[0m21:55:05.669542 [debug] [MainThread]: On master: Close
+[0m21:55:05.674579 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:55:05.675802 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:55:05.676668 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:55:05.717653 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:55:05.718643 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:55:05.719515 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:55:05.741057 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.021 seconds
+[0m21:55:05.760450 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:55:05.762193 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:55:05.771463 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  dbt was unable to infer all dependencies for the model "stg_weather_tables".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "stg_weather_tables":
+  
+  -- depends_on: {{ ref('mapping_vent_direction') }}
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:55:05.773095 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:55:05.774557 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  dbt was unable to infer all dependencies for the model "stg_weather_tables".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "stg_weather_tables":
+  
+  -- depends_on: {{ ref('mapping_vent_direction') }}
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql).
+[0m21:55:05.776763 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:55:05.777972 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:55:05.779187 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    dbt was unable to infer all dependencies for the model "stg_weather_tables".
+    This typically happens when ref() is placed within a conditional block.
+    
+    To fix this, add the following hint to the top of the model "stg_weather_tables":
+    
+    -- depends_on: {{ ref('mapping_vent_direction') }}
+    
+    > in macro stg_weather (macros/stg_weather.sql)
+    > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:55:05.780993 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.9362993, "process_in_blocks": "0", "process_kernel_time": 0.220947, "process_mem_max_rss": "135280", "process_out_blocks": "1520", "process_user_time": 4.515929}
+[0m21:55:05.782193 [debug] [MainThread]: Command `dbt compile` failed at 21:55:05.781982 after 1.94 seconds
+[0m21:55:05.783063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787788e95fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7877855f1f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7877855f1ff0>]}
+[0m21:55:05.783926 [debug] [MainThread]: Flushing usage events
+[0m21:55:06.169568 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:55:58.662459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe8da52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe79a7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe79a79d0>]}
+
+
+============================== 21:55:58.669942 | 894a0385-b0db-49bd-898d-cbd268dd709e ==============================
+[0m21:55:58.669942 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:55:58.671598 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'no_print': 'None', 'warn_error': 'None', 'cache_selected_only': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'debug': 'False', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'empty': 'False', 'target_path': 'None', 'quiet': 'False', 'fail_fast': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'invocation_command': 'dbt compile --select stg_weather_tables', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'hints_enabled': 'True', 'use_experimental_parser': 'False'}
+[0m21:55:59.021016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '894a0385-b0db-49bd-898d-cbd268dd709e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe8c72d70>]}
+[0m21:55:59.150728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '894a0385-b0db-49bd-898d-cbd268dd709e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe7c6b020>]}
+[0m21:55:59.152559 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:55:59.285203 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:55:59.663526 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:55:59.664469 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:55:59.665148 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:55:59.677483 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:55:59.686293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '894a0385-b0db-49bd-898d-cbd268dd709e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe6387350>]}
+[0m21:55:59.949860 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:55:59.954687 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:55:59.977086 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:55:59.991249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '894a0385-b0db-49bd-898d-cbd268dd709e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe634ab70>]}
+[0m21:55:59.992418 [info ] [MainThread]: Found 2 seeds, 2 models, 16 sources, 594 macros
+[0m21:55:59.993475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '894a0385-b0db-49bd-898d-cbd268dd709e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe5b83930>]}
+[0m21:55:59.996982 [info ] [MainThread]: 
+[0m21:55:59.997899 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:55:59.998822 [info ] [MainThread]: 
+[0m21:56:00.000128 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:56:00.008830 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:56:00.080256 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:56:00.081424 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:56:00.082622 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:56:00.109748 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.027 seconds
+[0m21:56:00.113028 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:56:00.114307 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:56:00.126207 [debug] [MainThread]: Using postgres connection "master"
+[0m21:56:00.127216 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:56:00.128100 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:56:00.150437 [debug] [MainThread]: SQL status: SELECT 0 in 0.022 seconds
+[0m21:56:00.153410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '894a0385-b0db-49bd-898d-cbd268dd709e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe5337860>]}
+[0m21:56:00.154727 [debug] [MainThread]: On master: ROLLBACK
+[0m21:56:00.155946 [debug] [MainThread]: On master: Close
+[0m21:56:00.161249 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:56:00.162499 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:56:00.163425 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:56:00.203825 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:56:00.204985 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:56:00.205833 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:56:00.225779 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.020 seconds
+[0m21:56:00.242783 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:56:00.244462 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:56:00.252068 [debug] [Thread-1 (]: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a node named 'mapping_vent_direction.csv' which was not found
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:56:00.253587 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:56:00.254989 [debug] [Thread-7 (]: Marking all children of 'model.dbt_pipeline.stg_weather_tables' to be skipped because of status 'error'.  Reason: Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+  Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a node named 'mapping_vent_direction.csv' which was not found
+  
+  > in macro stg_weather (macros/stg_weather.sql)
+  > called by model stg_weather_tables (models/staging/stg_weather_tables.sql).
+[0m21:56:00.257298 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:56:00.258666 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:56:00.260438 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Compilation Error in model stg_weather_tables (models/staging/stg_weather_tables.sql)
+    Model 'model.dbt_pipeline.stg_weather_tables' (models/staging/stg_weather_tables.sql) depends on a node named 'mapping_vent_direction.csv' which was not found
+    
+    > in macro stg_weather (macros/stg_weather.sql)
+    > called by model stg_weather_tables (models/staging/stg_weather_tables.sql)
+[0m21:56:00.262647 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.7595217, "process_in_blocks": "0", "process_kernel_time": 0.22685, "process_mem_max_rss": "135264", "process_out_blocks": "1512", "process_user_time": 4.074318}
+[0m21:56:00.264254 [debug] [MainThread]: Command `dbt compile` failed at 21:56:00.263963 after 1.76 seconds
+[0m21:56:00.265630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe7d81fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe4fedf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72abe4fedff0>]}
+[0m21:56:00.267046 [debug] [MainThread]: Flushing usage events
+[0m21:56:00.633119 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:56:58.254691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe339d92b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe325dbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe325db9d0>]}
+
+
+============================== 21:56:58.261402 | 6ad58d00-ad0e-4d1a-8806-2b21d90efd81 ==============================
+[0m21:56:58.261402 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:56:58.262508 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'quiet': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'version_check': 'True', 'static_parser': 'True', 'log_path': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/logs', 'warn_error': 'None', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'empty': 'False', 'partial_parse': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'debug': 'False', 'hints_enabled': 'True', 'profiles_dir': '/home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline', 'write_json': 'True', 'printer_width': '80', 'no_print': 'None', 'invocation_command': 'dbt compile --select stg_weather_tables', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m21:56:58.620140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ad58d00-ad0e-4d1a-8806-2b21d90efd81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe336a6d70>]}
+[0m21:56:58.757831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6ad58d00-ad0e-4d1a-8806-2b21d90efd81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe3289f020>]}
+[0m21:56:58.759704 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m21:56:58.895389 [debug] [MainThread]: checksum: 7bef77b900d341d2a05d4f79aec82e45aca32e89ddee5b9228c63554a7bd04b3, vars: {}, profile: profil_meteoforecast, target: dev, version: 1.12.0
+[0m21:56:59.284299 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:56:59.285261 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:56:59.285953 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:56:59.297448 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+[0m21:56:59.305654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6ad58d00-ad0e-4d1a-8806-2b21d90efd81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe30dbb350>]}
+[0m21:56:59.562473 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:56:59.567208 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:56:59.589466 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:56:59.603999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6ad58d00-ad0e-4d1a-8806-2b21d90efd81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe30d96b70>]}
+[0m21:56:59.605167 [info ] [MainThread]: Found 2 seeds, 2 models, 16 sources, 594 macros
+[0m21:56:59.606054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ad58d00-ad0e-4d1a-8806-2b21d90efd81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe305bfe70>]}
+[0m21:56:59.609440 [info ] [MainThread]: 
+[0m21:56:59.610544 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:56:59.611378 [info ] [MainThread]: 
+[0m21:56:59.612582 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:56:59.621139 [debug] [ThreadPool]: Acquiring new postgres connection 'list_meteoforecast_raw'
+[0m21:56:59.694909 [debug] [ThreadPool]: Using postgres connection "list_meteoforecast_raw"
+[0m21:56:59.695964 [debug] [ThreadPool]: On list_meteoforecast_raw: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "list_meteoforecast_raw"} */
+select
+      'meteoforecast' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'meteoforecast' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'meteoforecast' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m21:56:59.696831 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:56:59.722528 [debug] [ThreadPool]: SQL status: SELECT 16 in 0.026 seconds
+[0m21:56:59.725874 [debug] [ThreadPool]: On list_meteoforecast_raw: ROLLBACK
+[0m21:56:59.727215 [debug] [ThreadPool]: On list_meteoforecast_raw: Close
+[0m21:56:59.738710 [debug] [MainThread]: Using postgres connection "master"
+[0m21:56:59.739663 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:56:59.740444 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:56:59.763611 [debug] [MainThread]: SQL status: SELECT 0 in 0.023 seconds
+[0m21:56:59.766941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ad58d00-ad0e-4d1a-8806-2b21d90efd81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe2fd67930>]}
+[0m21:56:59.768115 [debug] [MainThread]: On master: ROLLBACK
+[0m21:56:59.769437 [debug] [MainThread]: On master: Close
+[0m21:56:59.775602 [debug] [Thread-1 (]: Began running node model.dbt_pipeline.stg_weather_tables
+[0m21:56:59.777000 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_meteoforecast_raw, now model.dbt_pipeline.stg_weather_tables)
+[0m21:56:59.778019 [debug] [Thread-1 (]: Began compiling node model.dbt_pipeline.stg_weather_tables
+[0m21:56:59.820950 [debug] [Thread-1 (]: Using postgres connection "model.dbt_pipeline.stg_weather_tables"
+[0m21:56:59.822021 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "profil_meteoforecast", "target_name": "dev", "node_id": "model.dbt_pipeline.stg_weather_tables"} */
+
+
+      
+
+        select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'FOREIGN' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from meteoforecast.information_schema.tables
+        where table_schema ilike 'raw'
+        and table_name ilike 'weather_%'
+        and table_name not ilike ''
+
+
+[0m21:56:59.822965 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:56:59.844156 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.021 seconds
+[0m21:56:59.858609 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_pipeline.stg_weather_tables"
+[0m21:56:59.860442 [debug] [Thread-1 (]: Began executing node model.dbt_pipeline.stg_weather_tables
+[0m21:56:59.861452 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: ROLLBACK
+[0m21:56:59.862821 [debug] [Thread-1 (]: On model.dbt_pipeline.stg_weather_tables: Close
+[0m21:56:59.864983 [debug] [Thread-1 (]: Finished running node model.dbt_pipeline.stg_weather_tables
+[0m21:56:59.868087 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:56:59.868905 [debug] [MainThread]: Connection 'model.dbt_pipeline.stg_weather_tables' was properly closed.
+[0m21:56:59.870315 [debug] [MainThread]: Command end result
+[0m21:56:59.949274 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/manifest.json
+[0m21:56:59.954224 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/semantic_manifest.json
+[0m21:56:59.959004 [debug] [MainThread]: Wrote artifact OsiDocument to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/osi_document.json
+[0m21:56:59.974064 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mohamed/Formation/Data Engineer/Projet 08 Construisez et testez une infrastructure de données/p8-forecast-pipeline/dbt_pipeline/target/run_results.json
+[0m21:56:59.978501 [info ] [MainThread]: Compiled node 'stg_weather_tables' is:
+
+depends_on: "meteoforecast"."raw"."mapping_vent_direction"
+-- 1. Récupération dynamique de toutes les tables 'weather_%' dans le schéma 'raw' essentiel permet la scalabilite.
+
+
+-- 2. Boucle sur les tables trouvées automatiquement
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_011024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-01' AS DATE) AS date_jour,
+        CAST('2024-10-01' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_021024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-02' AS DATE) AS date_jour,
+        CAST('2024-10-02' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_031024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-03' AS DATE) AS date_jour,
+        CAST('2024-10-03' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_041024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-04' AS DATE) AS date_jour,
+        CAST('2024-10-04' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_051024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-05' AS DATE) AS date_jour,
+        CAST('2024-10-05' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_061024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-06' AS DATE) AS date_jour,
+        CAST('2024-10-06' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_ichtegem_071024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-07' AS DATE) AS date_jour,
+        CAST('2024-10-07' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'IICHTE19' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_011024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-01' AS DATE) AS date_jour,
+        CAST('2024-10-01' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_021024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-02' AS DATE) AS date_jour,
+        CAST('2024-10-02' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_031024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-03' AS DATE) AS date_jour,
+        CAST('2024-10-03' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_041024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-04' AS DATE) AS date_jour,
+        CAST('2024-10-04' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_051024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-05' AS DATE) AS date_jour,
+        CAST('2024-10-05' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_061024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-06' AS DATE) AS date_jour,
+        CAST('2024-10-06' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+     UNION ALL 
+
+
+    
+    
+        
+    
+
+    SELECT * FROM (
+        
+
+
+
+
+
+
+
+
+WITH source AS (
+    SELECT * FROM "meteoforecast"."raw"."weather_la_madeleine_071024"
+),
+
+cleaned AS (
+    SELECT
+        CAST('2024-10-07' AS DATE) AS date_jour,
+        CAST('2024-10-07' || ' ' || "Time" AS TIMESTAMP) AS horodatage,
+
+        -- Nettoyage, castage, renomage et conversion des métriques
+        ROUND(CAST((NULLIF(regexp_replace("Temperature", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS temperature_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Humidity", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS humidite_pourcentage,
+        ROUND(CAST(NULLIF(regexp_replace("Pressure", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 33.8639, 2) AS pression_hpa,
+        ROUND(CAST((NULLIF(regexp_replace("Dew_Point", '[^0-9.-]', '', 'g'), '')::NUMERIC - 32) * 5.0 / 9.0 AS NUMERIC), 2) AS point_rosee_celsius,
+        ROUND(CAST(NULLIF(regexp_replace("Speed", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS vitesse_vent_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Gust", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 1.60934, 2) AS rafales_kmh,
+        ROUND(CAST(NULLIF(regexp_replace("Precip__Rate_", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_mm_h,
+        ROUND(CAST(NULLIF(regexp_replace("Precip_Accum", '[^0-9.-]', '', 'g'), '') AS NUMERIC) * 25.4, 2) AS precipitation_cumul_mm,
+        ROUND(CAST(NULLIF(regexp_replace("Solar", '[^0-9.-]', '', 'g'), '') AS NUMERIC), 2) AS rayonnement_solaire_wm2,
+        "UV"::NUMERIC AS uv_indice,
+        TRIM("Wind") AS direction_vent_cardinal,
+        'ILAMAD25' AS id_station
+    FROM source
+),
+
+-- Conversion des valeurs cardinale en degré
+converted AS (
+    SELECT
+        c.date_jour,
+        c.horodatage,
+        c.temperature_celsius,
+        c.humidite_pourcentage,
+        c.pression_hpa,
+        c.point_rosee_celsius,
+        c.vitesse_vent_kmh,
+        ic.degres AS direction_vent_degres,
+        c.rafales_kmh,
+        c.precipitation_mm_h,
+        c.precipitation_cumul_mm,
+        c.uv_indice,
+        c.rayonnement_solaire_wm2,
+        c.id_station
+    FROM cleaned c
+    LEFT JOIN "meteoforecast"."raw"."mapping_vent_direction" ic
+        ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
+)
+
+SELECT * FROM converted
+
+
+    )
+
+    
+
+
+[0m21:56:59.983442 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.8797888, "process_in_blocks": "0", "process_kernel_time": 0.251898, "process_mem_max_rss": "135492", "process_out_blocks": "3232", "process_user_time": 4.43921}
+[0m21:56:59.984581 [debug] [MainThread]: Command `dbt compile` succeeded at 21:56:59.984356 after 1.88 seconds
+[0m21:56:59.985480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe327bdfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe2f1dd390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79fe2f1dd440>]}
+[0m21:56:59.986407 [debug] [MainThread]: Flushing usage events
+[0m21:57:00.387073 [debug] [MainThread]: An error was encountered while trying to flush usage events

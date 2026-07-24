@@ -1,5 +1,6 @@
-{% macro stg_weather(source_name, table_name, station_id) %}
+{% macro stg_weather(relation, station_id) %}
 
+{% set table_name = relation.identifier %}
 {% set suffix = table_name[-6:] %}
 {% set annee = suffix[4:6] %}
 {% set mois = suffix[2:4] %}
@@ -7,7 +8,7 @@
 {% set date_combine = "20" ~ annee ~ "-" ~ mois ~ "-" ~ jour %}
 
 WITH source AS (
-    SELECT * FROM {{ source(source_name, table_name) }}
+    SELECT * FROM {{ relation }}
 ),
 
 cleaned AS (
@@ -49,7 +50,7 @@ converted AS (
         c.rayonnement_solaire_wm2,
         c.id_station
     FROM cleaned c
-    LEFT JOIN {{ ref('wind_direction_mapping') }} ic
+    LEFT JOIN {{ ref('mapping_vent_direction') }} ic
         ON UPPER(TRIM(c.direction_vent_cardinal)) = UPPER(TRIM(ic.cardinal))
 )
 

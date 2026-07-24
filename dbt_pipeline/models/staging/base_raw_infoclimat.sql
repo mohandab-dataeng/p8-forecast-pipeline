@@ -3,7 +3,7 @@ with source as (
   ),
   renamed as (
       select
-          {{ adapter.quote("_airbyte_raw_id") }},
+        {{ adapter.quote("_airbyte_raw_id") }},
         {{ adapter.quote("_airbyte_extracted_at") }},
         {{ adapter.quote("_airbyte_meta") }},
         {{ adapter.quote("_airbyte_generation_id") }},
