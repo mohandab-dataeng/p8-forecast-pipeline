@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.env
+
+# Virtual environments
+.venv
+/data
+.claude
+*.code-workspace
+*.claude-code-history
+*.ipynb
+dbt_pipeline/target/
+dbt_pipeline/logs/
+dbt_pipeline/dbt_packages/
+.claude/
+.claude-code-history/
+.directory
+logs/
