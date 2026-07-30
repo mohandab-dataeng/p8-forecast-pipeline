@@ -50,7 +50,7 @@ models:
       jointure avec dim_station_meteo. Une ligne par mesure.
     columns:
       - name: id_forecast
-        description: "Identifiant unique de la mesure (clé primaire), hash déterministe de id_station + horodatage + source_origine (+ raw_id pour Weather Underground, nécessaire pour distinguer les mesures dont l'horodatage se répète du fait de la date fixe arbitraire)."
+        description: "Identifiant unique de la mesure (clé primaire), hash déterministe de id_station + horodatage + jour +  source_origine (+ raw_id pour Weather Underground, nécessaire pour distinguer les mesures dont l'horodatage se répète du fait de la date fixe arbitraire)."
         tests: [unique, not_null]
       - name: id_station
         description: "Référence vers dim_station_meteo.id_station."
@@ -68,7 +68,7 @@ models:
           confirmée du connecteur), donc les 7 jours de la semaine sont fusionnés sans
           moyen de reconstituer la vraie date ; une date fixe arbitraire mais ciblant tout de même la semaine concernée (2024-10-01)
           est utilisée comme porteuse pour produire un TIMESTAMP valide.
-      - name: date_jour
+      - name: jour
         description: "Date de la mesure (sans l'heure). Disponible uniquement pour InfoClimat ; NULL pour Weather Underground (voir horodatage)."
       - name: semaine
         description: "Numéro de semaine ISO de la mesure. Calculé depuis horodatage pour InfoClimat ; fixé en dur à 40 pour Weather Underground (seule semaine disponible dans la source)."
@@ -76,6 +76,8 @@ models:
         description: "Mois de la mesure. Calculé depuis horodatage pour InfoClimat ; fixé en dur à 10 pour Weather Underground."
       - name: annee
         description: "Année de la mesure. Calculée depuis horodatage pour InfoClimat ; fixée en dur à 2024 pour Weather Underground."
+      - name: id_time
+        description: "Id pour la date : clef concaténée annnee+mois+jour"
       - name: temperature_celsius
         description: "Température en degrés Celsius."
       - name: humidite_pourcentage
@@ -110,3 +112,20 @@ models:
         description: "Ville de la station (repris de dim_station_meteo par jointure)."
       - name: pays
         description: "Pays de la station (repris de dim_station_meteo par jointure)."
+  - name: dim_time
+    description: >
+      Dimension temporelle au grain jour (année/mois/semaine/jour), dérivée des valeurs
+      distinctes présentes dans int_fct_forecast. Permet de retrouver année, mois et semaine
+      sans les stocker en clair sur chaque ligne de la table de faits.
+    columns:
+      - name: id_time
+        description: "Identifiant unique (clé primaire), hash déterministe de annee + mois + semaine."
+        tests: [unique, not_null]
+      - name: annee
+        description: "Année"
+      - name: mois
+        description: "Mois"
+      - name: semaine
+        description: "Semaine"
+      - name: jour
+        description: "Dae du jour si présente"

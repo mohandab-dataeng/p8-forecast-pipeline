@@ -3,8 +3,8 @@
 WITH fct_infoclimat AS (
     SELECT
         id_station,
-        horodatage,
-        date_jour,
+        horodatage::TIME,
+        date_jour::DATE AS jour,
         semaine,
         mois,
         annee,
@@ -27,8 +27,8 @@ WITH fct_infoclimat AS (
 fct_weather AS (
     SELECT
         id_station,
-        ('2024-10-01'::DATE + horodatage) AS horodatage,
-        NULL::DATE AS date_jour,
+        horodatage,
+        NULL::DATE AS jour,
         semaine,
         mois,
         annee,

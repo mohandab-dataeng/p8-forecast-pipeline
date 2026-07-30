@@ -4,21 +4,23 @@
       {'columns': ['id_forecast'], 'type': 'btree', 'unique': True},
       {'columns': ['id_station'], 'type': 'btree'},
       {'columns': ['horodatage'], 'type': 'btree'},
-      {'columns': ['date_jour'], 'type': 'btree'}
+      {'columns': ['jour'], 'type': 'btree'}
     ],
      post_hook = [
-      "ALTER TABLE {{ this }} ADD CONSTRAINT fk_fct_forecast_meteo_id_station FOREIGN KEY (id_station) REFERENCES {{ ref('dim_station_meteo') }} (id_station)"
+        "ALTER TABLE {{ this }} ADD CONSTRAINT fk_fct_forecast_meteo_id_station FOREIGN KEY (id_station) REFERENCES {{ ref('dim_station_meteo') }} (id_station)",
+        "ALTER TABLE {{ this }} ADD CONSTRAINT fk_fct_forecast_meteo_id_time FOREIGN KEY (id_time) REFERENCES {{ ref('dim_time') }} (id_time)"
      ]
 ) }}
 
 SELECT
-    {{ dbt_utils.generate_surrogate_key(['f.id_station', 'f.horodatage', 'f.source_origine', 'f.raw_id']) }} AS id_forecast,
+    {{ dbt_utils.generate_surrogate_key(['f.id_station', 'f.horodatage', 'f.jour', 'f.source_origine', 'f.raw_id']) }} AS id_forecast,
     f.id_station,
-    f.horodatage,
-    f.date_jour,
+    f.horodatage::TIME,
+    f.jour::DATE,
     f.semaine,
     f.mois,
     f.annee,
+    {{ dbt_utils.generate_surrogate_key(['f.annee', 'f.mois', 'f.semaine', 'f.jour']) }} AS id_time,
     f.temperature_celsius,
     f.humidite_pourcentage,
     f.pression_hpa,
