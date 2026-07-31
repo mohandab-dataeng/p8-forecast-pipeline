@@ -77,8 +77,8 @@ for src in sources:
 # --- Création de la destination Postgres ---
 
 destination_config = {
-    "host": "p8-postgres",
-    "port": 5432,
+    "host": os.environ["POSTGRES_HOST"],
+    "port": int(os.environ.get("POSTGRES_PORT", 5432)),
     "database": os.environ["POSTGRES_DB"],
     "username": os.environ["POSTGRES_USER"],
     "password": os.environ["POSTGRES_PASSWORD"], 

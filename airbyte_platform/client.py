@@ -1,6 +1,6 @@
 # ----- client.py -----
 
-# Description: connexion à l'api de airbyte automatisé pour tout les scripts suivants
+# Description: connexion à l'api de airbyte automatisé (configurer le .env)
 
 # --- Librairies ---
 
@@ -17,18 +17,19 @@ load_dotenv()
 
 class AirbyteClient:
     def __init__(self):
-        self.base_url = "http://localhost:8000/api/public/v1"
+        self.base_url = os.environ.get("AIRBYTE_URL", "http://localhost:8000/api/public/v1")
         self.session = requests.Session()
         retries = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503])
         self.session.mount("http://", HTTPAdapter(max_retries=retries))
         self._authenticate()
 
+
     def _authenticate(self):
         resp = self.session.post(
             f"{self.base_url}/applications/token",
             json={
-                "client_id": os.environ["CLIENT_ID"],
-                "client_secret": os.environ["CLIENT_SECRET"],
+                "client_id": os.environ["AIRBYTE_CLIENT_ID"],
+                "client_secret": os.environ["AIRBYTE_CLIENT_SECRET"],
                 "grant-type": "client_credentials",
             },
         )

@@ -1,105 +1,116 @@
-# P8 — Forecast Pipeline
+# Déploiement Airbyte sur EC2 — P8 Forecast Pipeline
 
-Pipeline de données météo : ingestion, transformation et mise à disposition de données horaires pour trois stations (InfoClimat, Weather Underground Ichtegem, Weather Underground La Madeleine), avec déploiement cible sur AWS.
+Ce document décrit le déploiement d'Airbyte sur AWS EC2, l'automatisation du cycle de synchronisation, et son enchaînement avec la tâche dbt sur ECS.
 
-## Stack
-
-- **Docker / Docker Compose** — orchestration locale de Postgres et dbt
-- **PostgreSQL** — entrepôt de données (schémas `raw`, `seeds`, et couches dbt)
-- **Airbyte (abctl)** — ingestion, configurée entièrement en code (SDK Python `airbyte-api`, pas d'UI)
-- **dbt Core** — transformation, staging → intermediate → marts
-- **uv** — gestion de l'environnement et des dépendances Python
-
-## Structure du repo
+## Vue d'ensemble
 
 ```
-.
-├── airbyte_platform/       # configuration et orchestration Airbyte, as-code
-│   ├── client.py           # client HTTP vers l'API Airbyte (auth, retry)
-│   ├── resources.py        # fonctions idempotentes get_or_create_* (source, destination, connexion)
-│   ├── sources.yaml        # déclaration des sources et de la destination
-│   └── setup_airbyte.py    # orchestration : lit sources.yaml, applique chaque ressource, lance les syncs
-├── dbt_pipeline/
-│   ├── models/
-│   │   ├── staging/        # 1 modèle par source brute, nettoyage/typage/renommage
-│   │   ├── intermediate/   # union des sources en un schéma commun
-│   │   └── marts/          # star schema final (dim_station_meteo, fct_forecast_meteo)
-│   ├── macros/              # logique de transformation réutilisable par source
-│   ├── seeds/               # référentiels statiques (mapping direction du vent, métadonnées stations)
-│   ├── tests/                # tests dbt custom (plausibilité des mesures, cohérence inter-couches)
-│   └── Dockerfile
-├── docker-compose.yml
-├── main.py                  # orchestration du pipeline complet (sync Airbyte → dbt run → dbt test)
-└── pyproject.toml
+EventBridge (planning)
+    → démarre l'instance EC2
+        → systemd lance main.py au boot
+            → attend qu'Airbyte soit prêt
+            → lance la synchronisation (setup_airbyte.py)
+            → déclenche la tâche ECS Fargate (dbt run + dbt test)
+            → éteint l'instance EC2
 ```
 
-## Ingestion — Airbyte
+RDS PostgreSQL reste actif en continu (Free Tier, coût nul à ce niveau d'usage) ; seule l'instance EC2 est démarrée/arrêtée à la demande pour limiter les coûts, Airbyte via `abctl` n'étant pas serverless.
 
-### Pourquoi abctl plutôt que Docker Compose ou PyAirbyte
+## Infrastructure
 
-Airbyte via Docker Compose est déprécié depuis août 2024. Deux alternatives ont été évaluées :
+| Ressource | Détail |
+|---|---|
+| Instance EC2 | `p8-airbyte-server`, `m7i-flex.large` (2 vCPU / 8 Go), Ubuntu 24.04 LTS, 30 Go gp3 |
+| RDS | `p8-meteoforecast-server`, PostgreSQL, `db.t3.micro`, Free Tier |
+| Security group EC2 | SSH (22) + Airbyte UI (8000), restreints à l'IP de développement |
+| Security group RDS | Autorise le security group de l'EC2 sur le port 5432 |
 
-- **PyAirbyte** : librairie Python autonome, reproductible via `uv sync`, mais pas de serveur ni de synchronisation automatique — exécution statique à la demande uniquement.
-- **abctl** : méthode standard en production. Synchronisation automatique, interface web de monitoring, configuration pilotée par API.
+## Installation d'Airbyte
 
-Choix retenu : **abctl**, pour la synchronisation automatique et la cohérence avec un environnement de production.
-
-### Configuration as-code
-
-L'interface web d'Airbyte n'est utilisée que pour le monitoring, jamais pour la configuration. Toute la configuration (sources, destination, connexions) est déclarée dans `airbyte_platform/sources.yaml` et appliquée par `setup_airbyte.py` via le SDK `airbyte-api`. Le script est idempotent : chaque exécution réinitialise le workspace (`reset_workspace`) puis recrée l'intégralité des ressources à partir du fichier de configuration, avant de déclencher les synchronisations en parallèle.
-
-### Sources
-
-| Source | Format | Contenu |
-|---|---|---|
-| `infoclimat` | JSON (fichier statique S3) | Mesures horaires de 4 stations (objet imbriqué station → tableau de mesures) + métadonnées des stations |
-| `weather_ichtegem` | Excel (S3) | Mesures horaires de la station personnelle d'Ichtegem (Belgique), classeur multi-feuilles |
-| `weather_la_madeleine` | Excel (S3) | Mesures horaires de la station personnelle de La Madeleine (France), classeur multi-feuilles |
-
-Chaque source Excel est ingérée comme un fichier entier (pas feuille par feuille) : le connecteur Airbyte `source-file` ne supporte pas le filtrage par feuille (`reader_options.sheet_name` est ignoré silencieusement, quelle que soit sa syntaxe), donc toute tentative de découpage par jour aboutit à une lecture complète du classeur sous un nom trompeur. La granularité temporelle exacte (jour) n'est donc pas récupérable pour ces deux sources ; seule l'heure de la mesure est fiable — voir la section transformation.
-
-## Transformation — dbt
-
-### Couches
-
-- **Staging** (`view`) : un modèle par source brute. Déballage JSON (`jsonb_each`/`jsonb_array_elements`), nettoyage des colonnes texte (regex, cast), conversion d'unités (impérial → métrique), renommage. Ajout des colonnes dérivées communes aux deux sources (`semaine`, `mois`, `annee`) et de la colonne technique `source_origine`.
-- **Intermediate** (`view`) : union des sources en un schéma de colonnes strictement aligné (mêmes noms, même ordre, `NULL` explicite côté source où une colonne n'existe pas).
-- **Marts** (`table`, schéma en étoile) :
-  - `dim_station_meteo` — dimension des 6 stations, avec index unique sur `id_station`
-  - `fct_forecast_meteo` — table de faits horaire, enrichie par jointure avec la dimension, index sur les colonnes de jointure et de filtre temporel, index unique sur `id_forecast` (clé de substitution calculée par hash)
-
-### Points d'attention documentés dans le modèle
-
-- La colonne `horodatage` de `fct_forecast_meteo` est fiable et précise pour InfoClimat (timestamp source réel). Pour les sources Weather Underground, seule l'heure est fiable (voir limitation du connecteur ci-dessus) : la date est reconstruite avec une valeur fixe arbitraire correspondant à la semaine réellement couverte par les données, ce qui produit un timestamp valide mais non représentatif du jour exact de la mesure.
-- La clé `id_forecast` inclut la colonne technique `_airbyte_raw_id` (UUID unique par ligne ingérée) pour les sources Weather Underground, en plus de `id_station`, `horodatage` et `source_origine` — nécessaire car l'horodatage reconstruit se répète une fois par jour réel fusionné dans la même table brute.
-- Les colonnes propres à une seule source (`uv_indice`, `rayonnement_solaire_wm2` côté Weather Underground ; `date_jour`, les champs de licence côté InfoClimat) sont explicitement `NULL` côté source où elles n'existent pas, plutôt qu'omises.
-
-### Qualité
-
-- Tests génériques (`schema.yml`) : unicité et non-nullité des clés primaires, intégrité référentielle entre `fct_forecast_meteo` et `dim_station_meteo`.
-- Tests custom (`tests/`) : plausibilité physique des mesures (température, humidité), absence de date future, cohérence du nombre de lignes entre la couche intermediate et le mart correspondant.
-- Documentation : chaque modèle et chaque colonne des marts sont décrits dans `schema.yml`, y compris les limites de données connues. Générée et consultable via `dbt docs generate` puis `dbt docs serve`.
-
-## Lancer le projet
+Airbyte est installé via `abctl`, seule méthode officiellement maintenue (Docker Compose déprécié depuis août 2024).
 
 ```bash
-docker compose up -d
+curl -LsfS https://get.airbyte.com | bash -
+abctl local install --low-resource-mode
+```
+
+### `--low-resource-mode`
+
+Sans ce flag, Kubernetes (le cluster `kind` créé par `abctl`) exige une réservation de ressources fixe avant de lancer le pod de réplication d'un sync (~4 Gi RAM / 2 CPU cumulés pour les conteneurs source + destination + orchestrateur), quel que soit le volume réel de données transférées. Sur un `m7i-flex.large`, cette réservation échoue systématiquement (`ResourceConstraintException`) même pour des fichiers de quelques centaines de Ko.
+
+`--low-resource-mode` met ces requêtes de ressources à 0 : Kubernetes lance les pods sans garantie minimale préalable, consommation réelle seulement. Comportement non recommandé pour de la production à fort volume, mais adapté à ce projet (trois fichiers sources, quelques milliers de lignes).
+
+## Configuration as-code
+
+Aucune configuration n'est faite via l'interface web. Le repo est cloné directement sur l'instance et piloté par `uv` :
+
+```bash
+git clone <repo-url>
+curl -LsSf https://astral.sh/uv/install.sh | sh
+cd p8-forecast-pipeline
 uv sync
-cd airbyte_platform && uv run python setup_airbyte.py
-cd ../dbt_pipeline && dbt deps && dbt run --full-refresh && dbt test
 ```
 
-Ou, pour enchaîner l'ensemble :
+Toutes les valeurs d'environnement (host RDS, credentials, host Airbyte) sont externalisées en variables d'environnement (`.env`, non commité), jamais en dur dans le code — y compris l'URL de l'API Airbyte (`AIRBYTE_URL`), pour que le même code fonctionne sans modification que le script s'exécute sur l'EC2 (`localhost`) ou ailleurs.
+
+## Automatisation du cycle
+
+### Script d'orchestration (`main.py`)
+
+Exécuté au démarrage de l'instance, dans l'ordre :
+
+1. Attend qu'Airbyte réponde sur `/api/public/v1/health`
+2. Lance `setup_airbyte.py` (création idempotente des ressources Airbyte + déclenchement des syncs)
+3. Déclenche la tâche ECS Fargate dbt (`aws ecs run-task`)
+4. Éteint l'instance (`shutdown -h now`)
+
+### Service systemd
+
+```ini
+# /etc/systemd/system/airbyte-sync.service
+[Unit]
+Description=Airbyte sync then trigger dbt on ECS then shutdown
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/p8-forecast-pipeline
+ExecStart=/usr/bin/env uv run python main.py
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ```bash
-uv run python main.py
+sudo systemctl daemon-reload
+sudo systemctl enable airbyte-sync.service
 ```
 
-## Déploiement AWS
+Le service se déclenche automatiquement à chaque démarrage de l'instance (`Type=oneshot` : une exécution unique par boot, pas de boucle).
 
-1. **RDS PostgreSQL** — base managée remplaçant le Postgres Docker local, destination finale pour Airbyte et dbt.
-2. **Secrets Manager** — stockage des identifiants RDS et autres secrets, plus de credentials en dur.
-3. **Airbyte sur EC2** — instance EC2 avec abctl, reconfigurée pour synchroniser vers l'endpoint RDS.
-4. **dbt sur ECS** — image Docker du projet dbt poussée sur ECR, exécutée en tâche ECS (Fargate) avec les secrets injectés depuis Secrets Manager.
-5. **EventBridge** — planification récurrente de la tâche ECS, remplaçant le déclenchement manuel local.
-6. **CloudWatch** — centralisation des logs Airbyte et dbt, alerte de base en cas d'échec.
+### Déclenchement planifié — EventBridge
+
+Une règle EventBridge (`p8-airbyte-sync-schedule`) démarre l'instance EC2 selon un planning (rate-based ou cron), via un appel `EC2 StartInstances`. Le rôle IAM associé à la règle nécessite la permission `ec2:StartInstances` ; l'instance elle-même nécessite un rôle IAM avec `ecs:RunTask` pour déclencher la tâche dbt en fin de cycle.
+
+## Historique des blocages rencontrés
+
+Documenté ici pour référence — chaque point a nécessité une vérification en doc officielle avant résolution, pas de correctif par supposition.
+
+| Symptôme | Cause | Résolution |
+|---|---|---|
+| `sheet_name` ignoré par le connecteur `source-file` | Non supporté par le connecteur (confirmé par le code source et la doc officielle) | Ingestion du fichier Excel entier par source, granularité jour perdue pour les sources Weather Underground |
+| `502 Bad Gateway` sur `/connections` | Disque EBS saturé (100 %), empêchant Kubernetes de créer de nouveaux conteneurs | Extension du volume à 30 Go (`growpart` + `resize2fs`) |
+| UI Airbyte : `Minified React error #185` | Bug connu, non résolu, lié à l'authentification (issues GitHub airbytehq/airbyte) | Contournement : `auth.enabled: false` en attendant un correctif officiel |
+| `401 Unauthorized` en cours de sync | Token API expirant après 900 s, jamais rafraîchi par le script d'attente | Ré-authentification automatique sur `401` dans `client.py` |
+| `ResourceConstraintException` sur le pod de réplication | Requêtes de ressources par défaut (~4 Gi) disproportionnées au volume réel | `abctl local install --low-resource-mode` |
+
+## Nettoyage en fin de projet
+
+```bash
+# EC2 : Stop (jamais Terminate avant la fin définitive du projet)
+# RDS : Stop temporarily (redémarre automatiquement après 7 jours si non relancé)
+```
+
+Surveiller l'onglet facturation AWS et libérer toute ressource (EC2, RDS, ECR, Elastic IP le cas échéant) à l'issue du projet.
