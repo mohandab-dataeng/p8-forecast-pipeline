@@ -1,0 +1,131 @@
+version: 2
+
+models:
+  - name: dim_station_meteo
+    description: >
+      Dimension des stations météo, unifiant les stations InfoClimat (4 stations,
+      métadonnées issues du JSON source dont la licence de la donnée) et Weather
+      Underground (2 stations, La Madeleine et Ichtegem, issues du seed
+      weather_stations). Une ligne par station, id_station unique.
+    columns:
+      - name: id_station
+        description: "Identifiant unique de la station (clé primaire). Format InfoClimat (ex: '07015') ou identifiant de station personnelle Weather Underground (ex: 'ILAMAD25')."
+        tests: [unique, not_null]
+      - name: nom_station
+        description: "Nom lisible de la station."
+      - name: latitude
+        description: "Latitude de la station, en degrés décimaux."
+      - name: longitude
+        description: "Longitude de la station, en degrés décimaux."
+      - name: altitude_m
+        description: "Altitude de la station, en mètres."
+      - name: type_station
+        description: "Type de station tel que déclaré par InfoClimat (ex: 'synop', 'static'). NULL pour les stations Weather Underground, cette information n'existant pas côté source."
+      - name: ville
+        description: "Ville associée à la station. NULL côté InfoClimat, cette information n'étant pas fournie par la source."
+      - name: pays
+        description: "Pays de la station, déduit de l'identifiant de station pour Weather Underground (France sauf Ichtegem en Belgique) ou fixé à 'France' pour InfoClimat (toutes les stations sont situées dans les Hauts-de-France)."
+      - name: hardware
+        description: "Matériel de la station personnelle, tel que déclaré par Weather Underground. NULL côté InfoClimat."
+      - name: software
+        description: "Logiciel de la station personnelle, tel que déclaré par Weather Underground. NULL côté InfoClimat."
+      - name: license
+        description: "Nom de la licence des données InfoClimat (ex: 'CC BY', 'Etalab Open License'). NULL côté Weather Underground."
+      - name: licence_url
+        description: "URL du texte complet de la licence. NULL côté Weather Underground."
+      - name: licence_source
+        description: "Organisme source des données déclaré dans la licence InfoClimat. NULL côté Weather Underground."
+      - name: licence_metadonnees
+        description: "URL de la fiche de métadonnées de la station InfoClimat. NULL côté Weather Underground."
+      - name: source_origine
+        description: "Source d'ingestion de la station : 'infoclimat' ou 'weather_underground'."
+
+  - name: fct_forecast_meteo
+    description: >
+      Table de faits des observations météo horaires, unifiant InfoClimat (4 stations,
+      horodatage précis) et Weather Underground (2 stations, semaine du 2024-10-01 au
+      2024-10-07 ; l'horodatage est reconstitué avec une date fixe arbitraire mais ciblant 
+      tout de même la semaine concernée, seule
+      l'heure étant fiable dans la source — voir colonne horodatage). Enrichie par
+      jointure avec dim_station_meteo. Une ligne par mesure.
+    columns:
+      - name: id_forecast
+        description: "Identifiant unique de la mesure (clé primaire), hash déterministe de id_station + horodatage + jour +  source_origine (+ raw_id pour Weather Underground, nécessaire pour distinguer les mesures dont l'horodatage se répète du fait de la date fixe arbitraire)."
+        tests: [unique, not_null]
+      - name: id_station
+        description: "Référence vers dim_station_meteo.id_station."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_station_meteo')
+                field: id_station
+      - name: horodatage
+        description: >
+          Date et heure de la mesure. Fiable et précise pour InfoClimat (timestamp source).
+          Pour Weather Underground, seule l'heure est fiable : le connecteur Airbyte
+          source-file ne permet pas de filtrer les feuilles Excel par jour (limitation
+          confirmée du connecteur), donc les 7 jours de la semaine sont fusionnés sans
+          moyen de reconstituer la vraie date ; une date fixe arbitraire mais ciblant tout de même la semaine concernée (2024-10-01)
+          est utilisée comme porteuse pour produire un TIMESTAMP valide.
+      - name: jour
+        description: "Date de la mesure (sans l'heure). Disponible uniquement pour InfoClimat ; NULL pour Weather Underground (voir horodatage)."
+      - name: semaine
+        description: "Numéro de semaine ISO de la mesure. Calculé depuis horodatage pour InfoClimat ; fixé en dur à 40 pour Weather Underground (seule semaine disponible dans la source)."
+      - name: mois
+        description: "Mois de la mesure. Calculé depuis horodatage pour InfoClimat ; fixé en dur à 10 pour Weather Underground."
+      - name: annee
+        description: "Année de la mesure. Calculée depuis horodatage pour InfoClimat ; fixée en dur à 2024 pour Weather Underground."
+      - name: id_time
+        description: "Id pour la date : clef concaténée annnee+mois+jour"
+      - name: temperature_celsius
+        description: "Température en degrés Celsius."
+      - name: humidite_pourcentage
+        description: "Humidité relative, en pourcentage (0-100)."
+      - name: pression_hpa
+        description: "Pression atmosphérique, en hectopascals."
+      - name: point_rosee_celsius
+        description: "Point de rosée, en degrés Celsius."
+      - name: vitesse_vent_kmh
+        description: "Vitesse moyenne du vent, en km/h."
+      - name: direction_vent_degres
+        description: "Direction du vent, en degrés (0-360). Pour Weather Underground, convertie depuis une direction cardinale via le seed mapping_vent_direction."
+      - name: rafales_kmh
+        description: "Vitesse des rafales de vent, en km/h."
+      - name: precipitation_mm_h
+        description: "Précipitations, en mm/h."
+      - name: precipitation_cumul_mm
+        description: "Précipitations cumulées, en mm."
+      - name: uv_indice
+        description: "Indice UV. Disponible uniquement pour Weather Underground ; NULL pour InfoClimat, cette mesure n'étant pas fournie par la source."
+      - name: rayonnement_solaire_wm2
+        description: "Rayonnement solaire, en W/m². Disponible uniquement pour Weather Underground ; NULL pour InfoClimat."
+      - name: source_origine
+        description: "Source d'ingestion de la mesure : 'infoclimat' ou 'weather_underground'."
+      - name: nom_station
+        description: "Nom de la station (repris de dim_station_meteo par jointure)."
+      - name: latitude
+        description: "Latitude de la station (repris de dim_station_meteo par jointure)."
+      - name: longitude
+        description: "Longitude de la station (repris de dim_station_meteo par jointure)."
+      - name: ville
+        description: "Ville de la station (repris de dim_station_meteo par jointure)."
+      - name: pays
+        description: "Pays de la station (repris de dim_station_meteo par jointure)."
+  - name: dim_time
+    description: >
+      Dimension temporelle au grain jour (année/mois/semaine/jour), dérivée des valeurs
+      distinctes présentes dans int_fct_forecast. Permet de retrouver année, mois et semaine
+      sans les stocker en clair sur chaque ligne de la table de faits.
+    columns:
+      - name: id_time
+        description: "Identifiant unique (clé primaire), hash déterministe de annee + mois + semaine."
+        tests: [unique, not_null]
+      - name: annee
+        description: "Année"
+      - name: mois
+        description: "Mois"
+      - name: semaine
+        description: "Semaine"
+      - name: jour
+        description: "Dae du jour si présente"
