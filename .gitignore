@@ -14,9 +14,9 @@ wheels/
 *.code-workspace
 *.claude-code-history
 *.ipynb
-dbt_pipeline/target/
-dbt_pipeline/logs/
-dbt_pipeline/dbt_packages/
+*/target
+*/logs
+*/dbt_packages
 .claude/
 .claude-code-history/
 .directory
