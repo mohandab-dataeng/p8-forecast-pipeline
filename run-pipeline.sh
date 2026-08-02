@@ -6,6 +6,8 @@ echo "$(date): Début du script" >> "$LOG_FILE"
 cd /home/ubuntu/p8-forecast-pipeline/airbyte_platform
 
 echo "$(date): Lancement de la sync Airbyte" >> "$LOG_FILE"
+echo "$(date): Attente Airbyte (120s)..." >> "$LOG_FILE"
+sleep 120
 if ! /home/ubuntu/.local/bin/uv run python setup_airbyte.py >> "$LOG_FILE" 2>&1; then
   echo "$(date): ERREUR sync Airbyte — extinction dans 10 min" >> "$LOG_FILE"
   sudo shutdown +10
